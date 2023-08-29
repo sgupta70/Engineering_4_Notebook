@@ -56,7 +56,7 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 Your readme will have various images and gifs on it. Upload a test image and test gif to make sure you've got the process figured out. Pick whatever image and gif you want!
 
 ### Test Link
- ![Hyperlink text]([http://www.google.com](https://github.com/sgupta70/Engineering_4_Notebook/tree/main/raspberry-pi))     
+![Hyper Link Text](https://github.com/sgupta70/Engineering_4_Notebook/tree/main/raspberry-pi))
 
 ### Test Image
 ![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/76e5353f-ab72-4726-9d29-1d0888f9fb80)
