@@ -65,3 +65,38 @@ Your readme will have various images and gifs on it. Upload a test image and tes
 ![602ab530c815e image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/815288c0-5e51-45d7-a89e-f978ec7a1821)
 
 
+
+## LED_Blink
+
+### Assignment Description
+
+For this assignment we had to get a Raspberry Pi Pico to blink 
+### Evidence 
+
+Pictures / Gifs of your work should go here. You need to communicate what your thing does. 
+
+### Wiring
+
+No wiring, plugged right into the computer 
+
+### Code
+```
+import board 
+import digitalio 
+import time 
+
+led = digitalio.DigitalInOut(board.LED) 
+led.direction = digitalio.Direction.OUTPUT 
+
+while True: 
+    led.value = True 
+    time.sleep(0.5)
+    led.value = False 
+    time.sleep(0.5)
+  ```
+Give me a link to your code. [Something like this](https://github.com/millerm22/Engineering_4_Notebook/blob/main/Raspberry_Pi/hello_world.py). Don't make me hunt through your folders, give me a nice link to click to take me there! Remember to **COMMENT YOUR CODE** if you want full credit. 
+
+### Reflection
+
+A majority of this assignment was getting our computers set up and connecting VS Code with Github. The code part was very simple, there was no wiring the 
+
