@@ -94,8 +94,7 @@ while True:
     led.value = False 
     time.sleep(0.5)
   ```
-Give me a link to your code. [Something like this](https://github.com/millerm22/Engineering_4_Notebook/blob/main/Raspberry_Pi/hello_world.py). Don't make me hunt through your folders, give me a nice link to click to take me there! Remember to **COMMENT YOUR CODE** if you want full credit. 
-
+ [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
 ### Reflection
 
 A majority of this assignment was getting our computers set up and connecting VS Code with Github. The code part was very simple, there was no wiring the 
