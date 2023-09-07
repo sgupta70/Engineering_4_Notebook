@@ -102,3 +102,36 @@ while True:
 
 A majority of this assignment was getting our computers set up and connecting VS Code with Github. The code part was very simple, there was no wiring needed so the pico was plugged right into the computer. The code would just turn the LED on and off. It was super simple and a good way to get back into coding for the new year. 
 
+## Launch Pad Part 1 
+
+### Assignment Description
+
+For this assignment we had to get our serial monitor to print a countdown which was counting down from 10
+
+### Evidence 
+
+
+### Wiring
+
+No wiring, plugged right into the computer 
+
+### Code
+```
+import board 
+import digitalio 
+import time 
+
+while True: 
+    for x in range(10, -1, -1):
+        time.sleep(1)
+        print(x)
+    print ("Launch")
+    time.sleep(2)
+    
+  ```
+ [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
+ 
+### Reflection
+
+This assignment wasn't very hard, I used the range() function  
+
