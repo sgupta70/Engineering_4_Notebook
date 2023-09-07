@@ -70,10 +70,12 @@ Your readme will have various images and gifs on it. Upload a test image and tes
 
 ### Assignment Description
 
-For this assignment we had to get a Raspberry Pi Pico to blink 
+For this assignment we had to set up our VS Code so it would be connected to GitHub and get a Raspberry Pi Pico to blink.
+
 ### Evidence 
 
-Pictures / Gifs of your work should go here. You need to communicate what your thing does. 
+![ezgif com-crop](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/0ac23d86-3241-46a1-bcbd-60724e039f2f)
+
 
 ### Wiring
 
@@ -94,9 +96,9 @@ while True:
     led.value = False 
     time.sleep(0.5)
   ```
-Give me a link to your code. [Something like this](https://github.com/millerm22/Engineering_4_Notebook/blob/main/Raspberry_Pi/hello_world.py). Don't make me hunt through your folders, give me a nice link to click to take me there! Remember to **COMMENT YOUR CODE** if you want full credit. 
-
+ [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
+ 
 ### Reflection
 
-A majority of this assignment was getting our computers set up and connecting VS Code with Github. The code part was very simple, there was no wiring the 
+A majority of this assignment was getting our computers set up and connecting VS Code with Github. The code part was very simple, there was no wiring needed so the pico was plugged right into the computer. The code would just turn the LED on and off. It was super simple and a good way to get back into coding for the new year. 
 
