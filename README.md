@@ -150,6 +150,7 @@ For this part we had to get two LEDs to blink with the countdown, flashing red a
 
 ### Wiring
 
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/9273f53b-699c-46c2-ab94-15fcf7f62ce8)
 
 
 ### Code
