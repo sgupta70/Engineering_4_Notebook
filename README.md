@@ -180,7 +180,7 @@ time.sleep(5.0) # green led on for 5 secs
  
 ### Reflection
 
-This assignment wasn't very hard, I used the range() function  
+This assignment wasn't super hard using the code I had from part 1 I just added on to turn on the red and green LED. 
 
 
 
