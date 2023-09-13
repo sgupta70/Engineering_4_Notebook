@@ -150,27 +150,37 @@ For this part we had to get two LEDs to blink with the countdown, flashing red a
 
 ### Wiring
 
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/9273f53b-699c-46c2-ab94-15fcf7f62ce8)
 
 
 ### Code
 ```
-import board 
-import digitalio 
-import time 
+import time
+import board
+import digitalio
 
-while True: 
-    for x in range(10, -1, -1):
-        time.sleep(1)
-        print(x)
-    print ("Launch")
-    time.sleep(2)
+ledRed = digitalio.DigitalInOut(board.GP18)
+ledRed.direction = digitalio.Direction.OUTPUT
+ledGreen = digitalio.DigitalInOut(board.GP13)
+ledGreen.direction = digitalio.Direction.OUTPUT # red and green led output location
+
+
+for x in range(10, 0, -1): # in the range from 10 to 0 going down by 1
+    print(x) # print the variable
+    ledRed.value = True
+    time.sleep(0.5)
+    ledRed.value = False
+    time.sleep(0.5) # blink red led
+print("Launch")
+ledGreen.value = True
+time.sleep(5.0) # green led on for 5 secs
     
   ```
  [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
  
 ### Reflection
 
-This assignment wasn't very hard, I used the range() function  
+This assignment wasn't super hard using the code I had from part 1 I just added on to turn on the red and green LED. 
 
 
 
