@@ -182,5 +182,63 @@ time.sleep(5.0) # green led on for 5 secs
 
 This assignment wasn't super hard using the code I had from part 1 I just added on to turn on the red and green LED. 
 
+## Part 3
 
+### Assignment Description
+
+For this part we had to press a button which would then get two LEDs to blink with the countdown, flashing red as it counts down from ten and then turns green when it prints "launch". 
+
+### Evidence 
+
+![ezgif com-resize](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/8bf5a4a4-6273-4a8b-92cc-04161d98ef88)
+
+
+### Wiring
+
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/1d8b4772-412d-4ca4-b1e0-0f1792f9279d) 
+
+### Code
+```
+# type: ignore
+import time
+import board
+import digitalio
+from digitalio import DigitalInOut, Direction, Pull
+
+ledRed = digitalio.DigitalInOut(board.GP18)
+ledRed.direction = digitalio.Direction.OUTPUT
+ledGreen = digitalio.DigitalInOut(board.GP13)
+ledGreen.direction = digitalio.Direction.OUTPUT # red and green led output location
+
+btn = DigitalInOut(board.GP15)
+btn.direction = Direction.INPUT
+btn.pull = Pull.UP # set pin number and input as pull up
+
+prev_state = btn.value # new variable
+
+while True:
+    cur_state = btn.value # new variable
+    if cur_state != prev_state: # if the state of the button changes
+        if not cur_state: # if the button is pressed
+            print("Button pushed")
+            for x in range(10, 0, -1): # in the range from 10 to 0 going down by 1
+                print(x) # print the variable
+                ledRed.value = True
+                time.sleep(0.5)
+                ledRed.value = False
+                time.sleep(0.5) # blink red led
+            ledGreen.value = True 
+            print("Launch")
+            time.sleep(3.0)
+            ledGreen.value = False # turn on green light and print launch then turn the light off after 3 seconds
+        else:
+            print("Button is up")
+
+    prev_state = cur_state # reset button value to unpressed
+  ```
+ [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
+ 
+### Reflection
+
+This assignment wasn't super hard using my knowledge from last year I knew how to get a button to work. I just put the code for the button into my existing code from part 2. IN the beginning the code wouldn't load onto the pico but I figured it out and it worked. 
 
