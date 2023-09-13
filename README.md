@@ -6,7 +6,7 @@
 * [Raspberry_Pi_Assignment_Template](#raspberry_pi_assignment_template)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 * [LED_Blink](#led_blink)
-* [## Launch_Pad_Assignment](#launch_pad_assignment)
+* [Launch_Pad_Assignment](#launch_pad_assignment)
 
 
 &nbsp;
