@@ -115,6 +115,7 @@ For this assignment we had to get our serial monitor to print a countdown which 
 
 ### Evidence 
 
+![ezgif com-optimize (1)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/91e85500-1036-4b44-96cc-9e324c315a18)
 
 ### Wiring
 
