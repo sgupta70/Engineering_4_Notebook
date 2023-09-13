@@ -193,7 +193,7 @@ For this part we had to press a button which would then get two LEDs to blink wi
 
 ### Evidence 
 
-![ezgif com-resize](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/8bf5a4a4-6273-4a8b-92cc-04161d98ef88)
+![ezgif com-optimize](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/384cad2e-5eac-4729-a733-671b42b083fc)
 
 
 ### Wiring
