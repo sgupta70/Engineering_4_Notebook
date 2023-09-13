@@ -5,6 +5,9 @@
 ## Table of Contents
 * [Raspberry_Pi_Assignment_Template](#raspberry_pi_assignment_template)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
+* [LED_Blink](#led_blink)
+* [## Launch_Pad_Assignment](#launch_pad_assignment)
+
 
 &nbsp;
 
@@ -102,7 +105,7 @@ while True:
 
 A majority of this assignment was getting our computers set up and connecting VS Code with Github. The code part was very simple, there was no wiring needed so the pico was plugged right into the computer. The code would just turn the LED on and off. It was super simple and a good way to get back into coding for the new year. 
 
-## Launch Pad Assignment
+## Launch_Pad_Assignment
 
 ## Part 1 
 
