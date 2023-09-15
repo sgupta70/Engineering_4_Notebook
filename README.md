@@ -128,11 +128,11 @@ import digitalio
 import time 
 
 while True: 
-    for x in range(10, -1, -1):
-        time.sleep(1)
-        print(x)
-    print ("Launch")
-    time.sleep(2)
+    for x in range(10, -1, -1): # in the range from 10 to 0 going down by 1
+        time.sleep(1) # wait a second 
+        print(x)  # print the variable
+    print ("Launch") 
+    time.sleep(2) # wait 2 seconds
     
   ```
  [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
@@ -259,7 +259,7 @@ For this part we had to press a button which would then get two LEDs to blink wi
 
 ### Wiring
 
-![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/1d8b4772-412d-4ca4-b1e0-0f1792f9279d) 
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/82896b62-b3e1-4695-90cc-4005b2729d48)
 
 ### Code
 ```
@@ -314,5 +314,5 @@ while True:
  
 ### Reflection
 
-This assignment wasn't super hard using my knowledge from last year I knew how to get a button to work. I just put the code for the button into my existing code from part 2. In the beginning the code wouldn't load onto the pico but I figured it out and realized it wasn't uploading to the D drive so once I fixed that it worked. 
+This was the final part for this assignment, I used to code that I already had and added in code for a servo which I remembered from last year. It wasn't working and we realized that one of my wires wasn't going into the correct pin so after switching that it all worked together. This assignment was a good way to get into code. 
 
