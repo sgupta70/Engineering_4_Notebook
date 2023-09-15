@@ -135,7 +135,6 @@ while True:
     time.sleep(2) # wait 2 seconds
     
   ```
- [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
  
 ### Reflection
 
@@ -180,7 +179,6 @@ ledGreen.value = True
 time.sleep(5.0) # green led on for 5 secs
     
   ```
- [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
  
 ### Reflection
 
@@ -240,7 +238,6 @@ while True:
 
     prev_state = cur_state # reset button value to unpressed
   ```
- [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
  
 ### Reflection
 
