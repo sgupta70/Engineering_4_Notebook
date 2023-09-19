@@ -341,7 +341,7 @@ import digitalio
 import time
 import adafruit_mpu6050
 import busio
-print("test")
+
 sda_pin = board.GP14
 scl_pin = board.GP15
 i2c = busio.I2C(board.GP15, board.GP14)
