@@ -7,6 +7,8 @@
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 * [LED_Blink](#led_blink)
 * [Launch_Pad_Assignment](#launch_pad_assignment)
+* [Crash_Avoidance_Assignment](#crash_avoidance_assignment)
+
 
 
 &nbsp;
@@ -135,7 +137,6 @@ while True:
     time.sleep(2) # wait 2 seconds
     
   ```
- [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
  
 ### Reflection
 
@@ -180,7 +181,6 @@ ledGreen.value = True
 time.sleep(5.0) # green led on for 5 secs
     
   ```
- [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
  
 ### Reflection
 
@@ -240,7 +240,6 @@ while True:
 
     prev_state = cur_state # reset button value to unpressed
   ```
- [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
  
 ### Reflection
 
@@ -316,3 +315,47 @@ while True:
 
 This was the final part for this assignment, I used to code that I already had and added in code for a servo which I remembered from last year. It wasn't working and we realized that one of my wires wasn't going into the correct pin so after switching that it all worked together. This assignment was a good way to get into code. 
 
+
+## Crash_Avoidance_Assignment
+
+## Part 1 
+
+### Assignment Description
+
+For this assignment we had to wire up an accelerometer and get it to print out the x, y, and z values on the serial monitor. 
+
+### Evidence 
+
+![ezgif com-crop (3)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/8844d422-a745-4fed-9fba-417db9241eea)
+
+### Wiring
+
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/f3594102-ce2c-4bd0-8c28-24206cadcea1)
+
+### Code
+```
+#type: ignore 
+
+import board 
+import digitalio
+import time
+import adafruit_mpu6050
+import busio
+
+sda_pin = board.GP14
+scl_pin = board.GP15
+i2c = busio.I2C(board.GP15, board.GP14)
+mpu = adafruit_mpu6050.MPU6050(i2c)
+print(mpu.acceleration) 
+
+while True:   
+    print(f"x angular velocity: {mpu.gyro[0]}") # print x value 
+    print(f"y angular velocity: {mpu.gyro[1]}") # print y value
+    print(f"z angular velocity: {mpu.gyro[2]}") # print z value 
+    print("") # prints a gap 
+    time.sleep(1) # wait a second 
+  ```
+ 
+### Reflection
+
+This was the first part of the Crash Avoidance assignment. I have never used accelerometer so I wasn't sure how to start. The canvas page was very helpful and gave me a link to see how to write f-strings, so after reading about how to wrote that code I was able to figure it out. My code wasn't working in the beginning but I got some help and realized I used the wrong bracket. After I fixed that the code worked. 
