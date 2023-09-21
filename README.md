@@ -140,7 +140,7 @@ while True:
  
 ### Reflection
 
-This assignment wasn't very hard, I used the range() function  
+This assignment wasn't very hard, I used the range() function which was something I hasn't used in a while so I had to re-learn how to use it. Using a sight online I read more about it and understood what I had to do to get the serial monitor to print a countdown. Overall it was a good assignment to get back into code. 
 
 ## Part 2
 
@@ -184,7 +184,7 @@ time.sleep(5.0) # green led on for 5 secs
  
 ### Reflection
 
-This assignment wasn't super hard using the code I had from part 1 I just added on to turn on the red and green LED. 
+This assignment wasn't super hard. I used the code from the part above and then added what I knew about LEDS from last year to turn the green and red LED  on at the correct times.  
 
 ## Part 3
 
