@@ -21,5 +21,3 @@ while True:
     print("") # prints a gap 
     time.sleep(1) # wait a second 
 
-    if mpu.acceleration[0] < 9 and mpu.acceleration[0] > -9 
-        print("no light")
