@@ -372,7 +372,7 @@ For this assignment we had to wire up an accelerometer and get it to print out t
 
 ### Wiring
 
-![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/f3594102-ce2c-4bd0-8c28-24206cadcea1)
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/e487c724-7d94-43ce-ad2d-34ec5806a160)
 
 ### Code
 ```
