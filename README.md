@@ -364,7 +364,7 @@ This was the first part of the Crash Avoidance assignment. I have never used acc
 
 ### Assignment Description
 
-For this assignment we had to wire up an accelerometer and get it to print out the x, y, and z values on the serial monitor. 
+For this assignment we had to add on to what we did above and get an LED to light up when it is tilted 90 degress to either side and also wire up a JST battery so it can run without being connected to the computer. I used an if statement to turn on the LED when the accelerometer printed out a z value of 90 degrees.
 
 ### Evidence 
 
@@ -408,5 +408,4 @@ while True:
   ```
  
 ### Reflection
-
-This was the first part of the Crash Avoidance assignment. I have never used accelerometer so I wasn't sure how to start. The canvas page was very helpful and gave me a link to see how to write f-strings, so after reading about how to wrote that code I was able to figure it out. My code wasn't working in the beginning but I got some help and realized I used the wrong bracket. After I fixed that the code worked. 
+I was able to just use my code from part 1 and just add on an if statement and define the LED. I read some about if statements to remember how to do them and once I did I was able to writ eone. It was working but the light kept flashing when it was horizontal so I switched the signs and the when the LED would be True(on) and False(off). Overall this assignment wasn't too bad and it was good to do if statements again. 
