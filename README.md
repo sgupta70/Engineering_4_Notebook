@@ -359,3 +359,53 @@ while True:
 ### Reflection
 
 This was the first part of the Crash Avoidance assignment. I have never used accelerometer so I wasn't sure how to start. The canvas page was very helpful and gave me a link to see how to write f-strings, so after reading about how to wrote that code I was able to figure it out. My code wasn't working in the beginning but I got some help and realized I used the wrong bracket. After I fixed that the code worked. 
+
+## Part 2
+
+### Assignment Description
+
+For this assignment we had to add on to what we did above and get an LED to light up when it is tilted 90 degress to either side and also wire up a JST battery so it can run without being connected to the computer. I used an if statement to turn on the LED when the accelerometer printed out a z value of 90 degrees.
+
+### Evidence 
+
+![My Project (3)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/65fec802-1e97-471b-b25c-d1711adbe4d3)
+
+### Wiring
+
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/e487c724-7d94-43ce-ad2d-34ec5806a160)
+
+### Code
+```
+#type: ignore 
+
+import board 
+import digitalio
+import time
+import adafruit_mpu6050
+import busio
+
+led = digitalio.DigitalInOut(board.GP0) 
+led.direction = digitalio.Direction.OUTPUT 
+sda_pin = board.GP14
+scl_pin = board.GP15
+i2c = busio.I2C(board.GP15, board.GP14)
+mpu = adafruit_mpu6050.MPU6050(i2c)
+print(mpu.acceleration) 
+
+while True:   
+    time.sleep(0.5)
+    print(f"x angular acceleration: {mpu.acceleration[0]}") # print x value 
+    print(f"y angular acceleration: {mpu.acceleration[1]}") # print y value
+    print(f"z angular acceleration: {mpu.acceleration[2]}") # print z value 
+    print("") # prints a gap 
+    time.sleep(1) # wait a second 
+
+    led.value = False # led is off 
+
+    if mpu.acceleration[0] > 9 or mpu.acceleration[0] < -9:
+        print("no light") # print that the light is not on 
+        led.value = True # led is on if it is tilted to 90 degress
+  ```
+ 
+### Reflection
+I was able to just use my code from part 1 and just add on an if statement and define the LED. I read some about if statements to remember how to do them and once I did I was able to writ eone. It was working but the light kept flashing when it was horizontal so I switched the signs and the when the LED would be True(on) and False(off). Overall this assignment wasn't too bad and it was good to do if statements again. 
