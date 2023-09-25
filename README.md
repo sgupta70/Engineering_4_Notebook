@@ -409,3 +409,75 @@ while True:
  
 ### Reflection
 I was able to just use my code from part 1 and just add on an if statement and define the LED. I read some about if statements to remember how to do them and once I did I was able to writ eone. It was working but the light kept flashing when it was horizontal so I switched the signs and the when the LED would be True(on) and False(off). Overall this assignment wasn't too bad and it was good to do if statements again. 
+
+## Part 3
+
+### Assignment Description
+
+
+
+### Evidence 
+
+![My Project (7)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/85cc5ef4-1fa6-453a-a591-f5a9e6ec52ae)
+
+### Wiring
+
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/e487c724-7d94-43ce-ad2d-34ec5806a160)
+
+### Code
+```
+#type: ignore 
+
+import board 
+import digitalio
+import time
+import adafruit_mpu6050
+import busio
+from adafruit_display_text import label
+import adafruit_displayio_ssd1306
+import terminalio 
+import displayio
+
+
+displayio.release_displays()
+sda_pin = board.GP14
+scl_pin = board.GP15
+i2c = busio.I2C(board.GP15, board.GP14)
+display_bus = displayio.I2CDisplay(i2c, device_address=0x3d, reset=board.GP3)
+display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64)
+
+
+led = digitalio.DigitalInOut(board.GP0) 
+led.direction = digitalio.Direction.OUTPUT 
+mpu = adafruit_mpu6050.MPU6050(i2c, address=0X68)
+print(mpu.acceleration) 
+
+# create the display group
+splash = displayio.Group()
+
+# add title block to display group
+title = "ANGULAR VELOCITY"
+# the order of this command is (font, text, text color, and location)
+text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=5)
+splash.append(text_area)    
+
+# you will write more code here that prints the x, y, and z angular velocity values to the screen below the title. Use f strings!
+# Don't forget to round the angular velocity values to three decimal places
+
+# send display group to screen
+display.show(splash)
+
+while True:   
+    mpu.gyro
+    text_area.text = (f"ANGULAR VELOCITY ) \nx : {mpu.acceleration[0]} \ny : {mpu.acceleration[1]} \nz :  {mpu.acceleration[2]}") # prints the values of x,y and z on the screen
+
+    led.value = False # led is off 
+
+    if mpu.acceleration[0] > 9 or mpu.acceleration[0] < -9:
+        print("no light") # print that the light is not on 
+        led.value = True # led is on if it is tilted to 90 degress
+
+  ```
+ 
+### Reflection
+I was able to just use my code from part 1 and just add on an if statement and define the LED. I read some about if statements to remember how to do them and once I did I was able to writ eone. It was working but the light kept flashing when it was horizontal so I switched the signs and the when the LED would be True(on) and False(off). Overall this assignment wasn't too bad and it was good to do if statements again. 
