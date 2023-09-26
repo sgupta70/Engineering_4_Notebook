@@ -414,7 +414,7 @@ I was able to just use my code from part 1 and just add on an if statement and d
 
 ### Assignment Description
 
-
+This was the last part of the crash avoidance assignment. 
 
 ### Evidence 
 
