@@ -414,7 +414,7 @@ I was able to just use my code from part 1 and just add on an if statement and d
 
 ### Assignment Description
 
-This was the last part of the crash avoidance assignment. 
+This was the last part of the crash avoidance assignment. We had to put all three parts together and get the x, y, and z values to print out on a OLED screen.
 
 ### Evidence 
 
@@ -422,7 +422,7 @@ This was the last part of the crash avoidance assignment.
 
 ### Wiring
 
-![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/e487c724-7d94-43ce-ad2d-34ec5806a160)
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/a7f67a0b-b5e7-4dbe-98ec-b1d3fa155a8b)
 
 ### Code
 ```
@@ -480,4 +480,4 @@ while True:
   ```
  
 ### Reflection
-I was able to just use my code from part 1 and just add on an if statement and define the LED. I read some about if statements to remember how to do them and once I did I was able to writ eone. It was working but the light kept flashing when it was horizontal so I switched the signs and the when the LED would be True(on) and False(off). Overall this assignment wasn't too bad and it was good to do if statements again. 
+This last part wasn't too bad, I was able to figure out how to write the code to print the values out on the screen, but when I tried uploading it wouldn't work. I got some help and we realized I just had a very sensitive wire so I just had to be careful not to mess up that wire so it wouldn't disconnect. After fixing that the code uploaded and it worked. Overall this assignment wasn't too bad it was good to continue getting back into code and trying new things I haven't coded yet. I learned how to code an OLED screen and throughout this assignment I learned how to use f-strings. I am now excited to start CAD!
