@@ -8,7 +8,7 @@
 * [LED_Blink](#led_blink)
 * [Launch_Pad_Assignment](#launch_pad_assignment)
 * [Crash_Avoidance_Assignment](#crash_avoidance_assignment)
-* [FEA_Part_1 ](#fea_part_1 )
+* [FEA](#fea)
 
 
 
@@ -502,3 +502,25 @@ For this assignement we were partnered up and required to make the strongest bea
 ### Reflection
 
 When starting this assignment we had the idea to make a I beam because it seemed to be the strongest, however we realized that there would be a lot of overhang and the beam would not be able to print. So we pivoted our idea and realized that triangles are the strongest shape. We made a long triangular prism with supporting beams inside. It matched the requirement for 180mm but it was too heavy. WE had to make the walls a lot thinner and cut out a lot of holes so it would be 13 grams. Overall this assignment was fun and a good way to get back into CAD and we can't wait to see how well it works. 
+
+
+## FEA_Part_2/3
+
+### Assignment Description
+We learned how to do a simulation on Onshape called FEA which shows the weakest and strongest parts of a desgin when force is applied. 
+
+### Part Link 
+
+[Link to OnShape Document](https://cvilleschools.onshape.com/documents/8b325fcbf1fc9ced667a46ad/w/244fda1d4dd423e6920295c5/e/da5820986e36d6e64f72469d?renderMode=0&uiState=651c4898682dbd1154ff7054)
+
+### Part Image
+![Assembly 1 (1)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/39202830-fd05-4bbc-83b5-1d62d99b433c)
+![Assembly 1 (2)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/4f51f6cd-e556-4d24-a891-ead528de8e5b)
+![Assembly 1](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/25e762aa-cc76-4c3b-a7d2-02801b0c0838)
+![Assembly 1 (3)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/f193720c-f05c-4be0-8003-15ed7fc8370f)
+
+
+### Reflection
+
+Our design is very good with most of the stress being at the point that connects to the base. The structural beams inside where very helpful to support the fore. We just need to reinforce the points of the triangle that are close to the base so it doesn't snap. 
+
