@@ -536,10 +536,9 @@ Our design is very good with most of the stress being at the point that connects
 ![Assembly 1 (5)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/6edb8424-2db6-4bd4-a8f1-5fa8272c07fb)
 ![Assembly 1 (9)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/d17533c0-c10e-4da3-bf17-ea3c5950bb66)
 ![Assembly 1 (7)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/32fb9931-31da-4c16-9570-4ea3a329bba5)
-![Assembly 1 (6)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/553f9c12-967c-455a-97df-78ab09eedf64)
 ![Assembly 1 (10)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/3d8094fd-4755-4261-8f7d-98da82d39743)
 ![Assembly 1 (8)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/8eacc8b7-5bf5-438b-a693-ea49dab8aee9)
 
 ### Reflection
 
-To improve our beam we added more support to the walls closest the the holder, so it wouldn't break as easily. We also thickend some of the walls were there was the most yellow. But to take away the added weight we cut out more holes. 
+Our beam was already pretty good with not a lot of yellow so it was kind of hard to improve. To improve our beam we added more support to the walls closest the the holder, so it wouldn't break as easily. We also thickend some of the walls were there was the most yellow. Doing that added more weight so we had to create more holes to remove the weight. We hope that this will improve our beam and overall it was a fun project!
