@@ -185,8 +185,7 @@ time.sleep(5.0) # green led on for 5 secs
  
 ### Reflection
 
-This assignment wasn't super hard. I used the code from the part above and then added what I knew about LEDS from last year to turn the green and red LED  on at the correct times.  
-
+This assignment wasn't super hard. I used the code from the part above and then added what I knew about LEDS from last year to turn the green and red LED  on at the correct times. I wired up both of the LEDs and nmed one Red and Green so I didn't get confused and I was able to just put it into the cide because I remembered how to turn on an LED from past assignments.
 ## Part 3
 
 ### Assignment Description
