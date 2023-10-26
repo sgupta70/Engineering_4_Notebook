@@ -485,7 +485,7 @@ while True:
 ### Reflection
 This last part wasn't too bad, I was able to figure out how to write the code to print the values out on the screen, but when I tried uploading it wouldn't work. I got some help and we realized I just had a very sensitive wire so I just had to be careful not to mess up that wire so it wouldn't disconnect. After fixing that the code uploaded and it worked. Overall this assignment wasn't too bad it was good to continue getting back into code and trying new things I haven't coded yet. I learned how to code an OLED screen and throughout this assignment I learned how to use f-strings. I am now excited to start CAD!
 
-## Landing Area Assignment 
+## Landing_Area_Assignment 
 
 ### Part 1
 
