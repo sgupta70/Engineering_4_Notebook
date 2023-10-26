@@ -8,6 +8,7 @@
 * [LED_Blink](#led_blink)
 * [Launch_Pad_Assignment](#launch_pad_assignment)
 * [Crash_Avoidance_Assignment](#crash_avoidance_assignment)
+* [Landing_Area_Assignment](#landing_area_assignment)
 * [FEA_Beam](#fea_beam)
 
 
@@ -71,6 +72,7 @@ Your readme will have various images and gifs on it. Upload a test image and tes
 ![602ab530c815e image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/815288c0-5e51-45d7-a89e-f978ec7a1821)
 
 
+# Code
 
 ## LED_Blink
 
@@ -110,7 +112,7 @@ A majority of this assignment was getting our computers set up and connecting VS
 
 ## Launch_Pad_Assignment
 
-## Part 1 
+### Part 1 
 
 ### Assignment Description
 
@@ -143,7 +145,7 @@ while True:
 
 This assignment wasn't very hard, I used the range() function which was something I hasn't used in a while so I had to re-learn how to use it. Using a sight online I read more about it and understood what I had to do to get the serial monitor to print a countdown. Overall it was a good assignment to get back into code. 
 
-## Part 2
+### Part 2
 
 ### Assignment Description
 
@@ -186,7 +188,8 @@ time.sleep(5.0) # green led on for 5 secs
 ### Reflection
 
 This assignment wasn't super hard. I used the code from the part above and then added what I knew about LEDS from last year to turn the green and red LED  on at the correct times. I wired up both of the LEDs and nmed one Red and Green so I didn't get confused and I was able to just put it into the cide because I remembered how to turn on an LED from past assignments.
-## Part 3
+
+### Part 3
 
 ### Assignment Description
 
@@ -245,7 +248,7 @@ while True:
 
 This assignment wasn't super hard using my knowledge from last year I knew how to get a button to work. I just put the code for the button into my existing code from part 2. In the beginning the code wouldn't load onto the pico but I figured it out and realized it wasn't uploading to the D drive so once I fixed that it worked. 
 
-## Part 4
+### Part 4
 
 ### Assignment Description
 
@@ -318,7 +321,7 @@ This was the final part for this assignment, I used to code that I already had a
 
 ## Crash_Avoidance_Assignment
 
-## Part 1 
+### Part 1 
 
 ### Assignment Description
 
@@ -360,7 +363,7 @@ while True:
 
 This was the first part of the Crash Avoidance assignment. I have never used accelerometer so I wasn't sure how to start. The canvas page was very helpful and gave me a link to see how to write f-strings, so after reading about how to wrote that code I was able to figure it out. My code wasn't working in the beginning but I got some help and realized I used the wrong bracket. After I fixed that the code worked. 
 
-## Part 2
+### Part 2
 
 ### Assignment Description
 
@@ -410,7 +413,7 @@ while True:
 ### Reflection
 I was able to just use my code from part 1 and just add on an if statement and define the LED. I read some about if statements to remember how to do them and once I did I was able to writ eone. It was working but the light kept flashing when it was horizontal so I switched the signs and the when the LED would be True(on) and False(off). Overall this assignment wasn't too bad and it was good to do if statements again. 
 
-## Part 3
+### Part 3
 
 ### Assignment Description
 
@@ -482,9 +485,9 @@ while True:
 ### Reflection
 This last part wasn't too bad, I was able to figure out how to write the code to print the values out on the screen, but when I tried uploading it wouldn't work. I got some help and we realized I just had a very sensitive wire so I just had to be careful not to mess up that wire so it wouldn't disconnect. After fixing that the code uploaded and it worked. Overall this assignment wasn't too bad it was good to continue getting back into code and trying new things I haven't coded yet. I learned how to code an OLED screen and throughout this assignment I learned how to use f-strings. I am now excited to start CAD!
 
-## Landing Area
+## Landing Area Assignment 
 
-## Part 1
+### Part 1
 
 ### Assignment Description
 
@@ -543,7 +546,7 @@ This assignment was too bad, getting help from google and [River](https://github
 
 ## FEA_Beam
 
-## FEA_Part_1 
+### FEA_Part_1 
 
 ### Assignment Description
 For this assignement we were partnered up and required to make the strongest beam we could with any prior knowledge. They would then be tested as we add weight to a bucket. The bucket had to hang 180mm away from the base and it had to weight a maximum of 13 grams.  
@@ -563,7 +566,7 @@ For this assignement we were partnered up and required to make the strongest bea
 When starting this assignment we had the idea to make a I beam because it seemed to be the strongest, however we realized that there would be a lot of overhang and the beam would not be able to print. So we pivoted our idea and realized that triangles are the strongest shape. We made a long triangular prism with supporting beams inside. It matched the requirement for 180mm but it was too heavy. WE had to make the walls a lot thinner and cut out a lot of holes so it would be 13 grams. Overall this assignment was fun and a good way to get back into CAD and we can't wait to see how well it works. 
 
 
-## FEA_Part_2/3
+### FEA_Part_2/3
 
 ### Assignment Description
 We learned how to do a simulation on Onshape called FEA which shows the weakest and strongest parts of a desgin when force is applied. 
@@ -583,7 +586,7 @@ We learned how to do a simulation on Onshape called FEA which shows the weakest 
 
 Our design is very good with most of the stress being at the point that connects to the base. The structural beams inside where very helpful to support the fore. We just need to reinforce the points of the triangle that are close to the base so it doesn't snap. 
 
-## FEA_Part_4
+### FEA_Part_4
 
 ### Part Link 
 
