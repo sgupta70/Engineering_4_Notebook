@@ -482,6 +482,65 @@ while True:
 ### Reflection
 This last part wasn't too bad, I was able to figure out how to write the code to print the values out on the screen, but when I tried uploading it wouldn't work. I got some help and we realized I just had a very sensitive wire so I just had to be careful not to mess up that wire so it wouldn't disconnect. After fixing that the code uploaded and it worked. Overall this assignment wasn't too bad it was good to continue getting back into code and trying new things I haven't coded yet. I learned how to code an OLED screen and throughout this assignment I learned how to use f-strings. I am now excited to start CAD!
 
+## Landing Area
+
+## Part 1
+
+### Assignment Description
+
+For this assignment we had to write a script that takes three coordinates and returns the area using a function.
+
+### Evidence 
+
+![Capture](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/e2ffc129-f073-443c-8d92-a91eca0a0704)
+
+### Wiring
+
+none 
+
+### Code
+```
+import time
+
+def validate_input(input_string: str): # return false on error or an array of the form [x, y] on success
+    try:
+        input_parts = input_string.split(",") # a comma separates the coordinate points
+    except ValueError:
+        return False
+    if len(input_parts) != 2: # we expect an x and a y coordinate
+        return False
+    try:
+        result = [float(part) for part in input_parts] # turn the strings in input_parts into floats
+        return result
+    except ValueError: # if something wasn't a float
+        return False
+
+def get_area(p1, p2, p3): 
+    area = 0.5 * (p1[0] * (p2[1] - p3[1]) + p2[0] * (p3[1] - p1[1]) + p3[0] * (p1[1] - p2[1])) # math equation for area
+    return abs(area)
+
+while True:
+    vertex_1 = validate_input(input("Vertex 1: "))
+    if not vertex_1:
+        print("That was not the proper format. Please try again.")
+        continue    # serial print to enter coordinates and if the worng format is put return an error
+    vertex_2 = validate_input(input("Vertex 2: "))
+    if not vertex_2:
+        print("That was not the proper format. Please try again.")
+        continue
+    vertex_3 = validate_input(input("Vertex 3: "))
+    if not vertex_3:
+        print("That was not the proper format. Please try again.")
+        continue
+    area = get_area(vertex_1, vertex_2, vertex_3)   # call back to the math function plugging in the three points
+    print(f"The area of the triangle with vertices ({vertex_1[0]},{vertex_1[1]}), ({vertex_2[0]},{vertex_2[1]}), ({vertex_3[0]},{vertex_3[1]}) is {area} square km.")
+  ```
+ 
+### Reflection
+This assignment was too bad, getting help from google and [River](https://github.com/rivques) code, I was able to easily trouble shoot and see why it wasn't working. My biggest problem was that it was just loading very slowly so it took forever to type in the coordinates but it worked well and printed out what I needed. 
+
+# CAD
+
 ## FEA_Beam
 
 ## FEA_Part_1 
@@ -541,3 +600,5 @@ Our design is very good with most of the stress being at the point that connects
 ### Reflection
 
 Our beam was already pretty good with not a lot of yellow so it was kind of hard to improve. To improve our beam we added more support to the walls closest the the holder, so it wouldn't break as easily. We also thickend some of the walls were there was the most yellow. Doing that added more weight so we had to create more holes to remove the weight. We hope that this will improve our beam and overall it was a fun project!
+
+
