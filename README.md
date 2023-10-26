@@ -8,6 +8,7 @@
 * [LED_Blink](#led_blink)
 * [Launch_Pad_Assignment](#launch_pad_assignment)
 * [Crash_Avoidance_Assignment](#crash_avoidance_assignment)
+* [FEA_Beam](#fea_beam)
 
 
 
@@ -184,8 +185,7 @@ time.sleep(5.0) # green led on for 5 secs
  
 ### Reflection
 
-This assignment wasn't super hard. I used the code from the part above and then added what I knew about LEDS from last year to turn the green and red LED  on at the correct times.  
-
+This assignment wasn't super hard. I used the code from the part above and then added what I knew about LEDS from last year to turn the green and red LED  on at the correct times. I wired up both of the LEDs and nmed one Red and Green so I didn't get confused and I was able to just put it into the cide because I remembered how to turn on an LED from past assignments.
 ## Part 3
 
 ### Assignment Description
@@ -409,3 +409,135 @@ while True:
  
 ### Reflection
 I was able to just use my code from part 1 and just add on an if statement and define the LED. I read some about if statements to remember how to do them and once I did I was able to writ eone. It was working but the light kept flashing when it was horizontal so I switched the signs and the when the LED would be True(on) and False(off). Overall this assignment wasn't too bad and it was good to do if statements again. 
+
+## Part 3
+
+### Assignment Description
+
+This was the last part of the crash avoidance assignment. We had to put all three parts together and get the x, y, and z values to print out on a OLED screen.
+
+### Evidence 
+
+![My Project (7)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/85cc5ef4-1fa6-453a-a591-f5a9e6ec52ae)
+
+### Wiring
+
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/a7f67a0b-b5e7-4dbe-98ec-b1d3fa155a8b)
+
+### Code
+```
+#type: ignore 
+
+import board 
+import digitalio
+import time
+import adafruit_mpu6050
+import busio
+from adafruit_display_text import label
+import adafruit_displayio_ssd1306
+import terminalio 
+import displayio
+
+
+displayio.release_displays()
+sda_pin = board.GP14
+scl_pin = board.GP15
+i2c = busio.I2C(board.GP15, board.GP14)
+display_bus = displayio.I2CDisplay(i2c, device_address=0x3d, reset=board.GP3)
+display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64)
+
+
+led = digitalio.DigitalInOut(board.GP0) 
+led.direction = digitalio.Direction.OUTPUT 
+mpu = adafruit_mpu6050.MPU6050(i2c, address=0X68)
+print(mpu.acceleration) 
+
+# create the display group
+splash = displayio.Group()
+
+# add title block to display group
+title = "ANGULAR VELOCITY"
+# the order of this command is (font, text, text color, and location)
+text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=5)
+splash.append(text_area)    
+
+# you will write more code here that prints the x, y, and z angular velocity values to the screen below the title. Use f strings!
+# Don't forget to round the angular velocity values to three decimal places
+
+# send display group to screen
+display.show(splash)
+
+while True:   
+    mpu.gyro
+    text_area.text = (f"ANGULAR VELOCITY ) \nx : {mpu.acceleration[0]} \ny : {mpu.acceleration[1]} \nz :  {mpu.acceleration[2]}") # prints the values of x,y and z on the screen
+
+    led.value = False # led is off 
+
+    if mpu.acceleration[0] > 9 or mpu.acceleration[0] < -9:
+        print("no light") # print that the light is not on 
+        led.value = True # led is on if it is tilted to 90 degress
+
+  ```
+ 
+### Reflection
+This last part wasn't too bad, I was able to figure out how to write the code to print the values out on the screen, but when I tried uploading it wouldn't work. I got some help and we realized I just had a very sensitive wire so I just had to be careful not to mess up that wire so it wouldn't disconnect. After fixing that the code uploaded and it worked. Overall this assignment wasn't too bad it was good to continue getting back into code and trying new things I haven't coded yet. I learned how to code an OLED screen and throughout this assignment I learned how to use f-strings. I am now excited to start CAD!
+
+## FEA_Beam
+
+## FEA_Part_1 
+
+### Assignment Description
+For this assignement we were partnered up and required to make the strongest beam we could with any prior knowledge. They would then be tested as we add weight to a bucket. The bucket had to hang 180mm away from the base and it had to weight a maximum of 13 grams.  
+
+### Part Link 
+
+[Link to OnShape Document](https://cvilleschools.onshape.com/documents/8b325fcbf1fc9ced667a46ad/w/244fda1d4dd423e6920295c5/e/da5820986e36d6e64f72469d?renderMode=0&uiState=651c4898682dbd1154ff7054)
+
+### Part Image
+
+![Beam Starter + Holder (1)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/e544fb58-9bc6-48a1-bf78-4421a7003cab)
+![Beam Starter + Holder](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/6d120254-8b42-4404-98a4-d1a67529a0ab)
+
+
+### Reflection
+
+When starting this assignment we had the idea to make a I beam because it seemed to be the strongest, however we realized that there would be a lot of overhang and the beam would not be able to print. So we pivoted our idea and realized that triangles are the strongest shape. We made a long triangular prism with supporting beams inside. It matched the requirement for 180mm but it was too heavy. WE had to make the walls a lot thinner and cut out a lot of holes so it would be 13 grams. Overall this assignment was fun and a good way to get back into CAD and we can't wait to see how well it works. 
+
+
+## FEA_Part_2/3
+
+### Assignment Description
+We learned how to do a simulation on Onshape called FEA which shows the weakest and strongest parts of a desgin when force is applied. 
+
+### Part Link 
+
+[Link to OnShape Document](https://cvilleschools.onshape.com/documents/8b325fcbf1fc9ced667a46ad/w/244fda1d4dd423e6920295c5/e/da5820986e36d6e64f72469d?renderMode=0&uiState=651c4898682dbd1154ff7054)
+
+### Part Image
+![Assembly 1 (1)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/39202830-fd05-4bbc-83b5-1d62d99b433c)
+![Assembly 1 (2)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/4f51f6cd-e556-4d24-a891-ead528de8e5b)
+![Assembly 1](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/25e762aa-cc76-4c3b-a7d2-02801b0c0838)
+![Assembly 1 (3)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/f193720c-f05c-4be0-8003-15ed7fc8370f)
+
+
+### Reflection
+
+Our design is very good with most of the stress being at the point that connects to the base. The structural beams inside where very helpful to support the fore. We just need to reinforce the points of the triangle that are close to the base so it doesn't snap. 
+
+## FEA_Part_4
+
+### Part Link 
+
+[Link to OnShape Document](https://cvilleschools.onshape.com/documents/8b325fcbf1fc9ced667a46ad/w/244fda1d4dd423e6920295c5/e/da5820986e36d6e64f72469d?renderMode=0&uiState=651c4898682dbd1154ff7054)
+
+### Part Image
+
+![Assembly 1 (5)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/6edb8424-2db6-4bd4-a8f1-5fa8272c07fb)
+![Assembly 1 (9)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/d17533c0-c10e-4da3-bf17-ea3c5950bb66)
+![Assembly 1 (7)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/32fb9931-31da-4c16-9570-4ea3a329bba5)
+![Assembly 1 (10)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/3d8094fd-4755-4261-8f7d-98da82d39743)
+![Assembly 1 (8)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/8eacc8b7-5bf5-438b-a693-ea49dab8aee9)
+
+### Reflection
+
+Our beam was already pretty good with not a lot of yellow so it was kind of hard to improve. To improve our beam we added more support to the walls closest the the holder, so it wouldn't break as easily. We also thickend some of the walls were there was the most yellow. Doing that added more weight so we had to create more holes to remove the weight. We hope that this will improve our beam and overall it was a fun project!
