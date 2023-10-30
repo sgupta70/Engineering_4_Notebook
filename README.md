@@ -542,8 +542,6 @@ while True:
 #### Reflection
 This assignment was too bad, getting help from google and [River](https://github.com/rivques) code, I was able to easily trouble shoot and see why it wasn't working. My biggest problem was that it was just loading very slowly so it took forever to type in the coordinates but it worked well and printed out what I needed. 
 
-## Landing_Area_Assignment 
-
 ### Part 2
 
 #### Assignment Description
