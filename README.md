@@ -556,6 +556,8 @@ For this assignment we had to write a script that takes three coordinates and re
 
 #### Wiring
 
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/5297f943-18ff-4571-9100-8adf44b70285)
+
 
 #### Code
 ```
@@ -642,7 +644,7 @@ while True:
 ```
  
 #### Reflection
-This assignment was too bad, getting help from google and [River](https://github.com/rivques) code, I was able to easily trouble shoot and see why it wasn't working. My biggest problem was that it was just loading very slowly so it took forever to type in the coordinates but it worked well and printed out what I needed. 
+This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print.
 
 
 # CAD
