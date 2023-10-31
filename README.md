@@ -8,6 +8,7 @@
 * [LED_Blink](#led_blink)
 * [Launch_Pad_Assignment](#launch_pad_assignment)
 * [Crash_Avoidance_Assignment](#crash_avoidance_assignment)
+* [Landing_Area_Assignment](#landing_area_assignment)
 * [FEA_Beam](#fea_beam)
 
 
@@ -71,23 +72,24 @@ Your readme will have various images and gifs on it. Upload a test image and tes
 ![602ab530c815e image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/815288c0-5e51-45d7-a89e-f978ec7a1821)
 
 
+# Code
 
 ## LED_Blink
 
-### Assignment Description
+#### Assignment Description
 
 For this assignment we had to set up our VS Code so it would be connected to GitHub and get a Raspberry Pi Pico to blink.
 
-### Evidence 
+#### Evidence 
 
 ![ezgif com-crop](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/0ac23d86-3241-46a1-bcbd-60724e039f2f)
 
 
-### Wiring
+#### Wiring
 
 No wiring, plugged right into the computer 
 
-### Code
+#### Code
 ```
 import board 
 import digitalio 
@@ -104,27 +106,27 @@ while True:
   ```
  [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
  
-### Reflection
+#### Reflection
 
 A majority of this assignment was getting our computers set up and connecting VS Code with Github. The code part was very simple, there was no wiring needed so the pico was plugged right into the computer. The code would just turn the LED on and off. It was super simple and a good way to get back into coding for the new year. 
 
 ## Launch_Pad_Assignment
 
-## Part 1 
+### Part 1 
 
-### Assignment Description
+#### Assignment Description
 
 For this assignment we had to get our serial monitor to print a countdown which was counting down from 10
 
-### Evidence 
+#### Evidence 
 
 ![ezgif com-optimize (1)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/91e85500-1036-4b44-96cc-9e324c315a18)
 
-### Wiring
+#### Wiring
 
 No wiring, plugged right into the computer 
 
-### Code
+#### Code
 ```
 import board 
 import digitalio 
@@ -139,27 +141,27 @@ while True:
     
   ```
  
-### Reflection
+#### Reflection
 
 This assignment wasn't very hard, I used the range() function which was something I hasn't used in a while so I had to re-learn how to use it. Using a sight online I read more about it and understood what I had to do to get the serial monitor to print a countdown. Overall it was a good assignment to get back into code. 
 
-## Part 2
+### Part 2
 
-### Assignment Description
+#### Assignment Description
 
 For this part we had to get two LEDs to blink with the countdown, flashing red as it counts down from ten and then turns green when it prints "launch". 
 
-### Evidence 
+#### Evidence 
 
 ![ezgif com-resize](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/8bf5a4a4-6273-4a8b-92cc-04161d98ef88)
 
 
-### Wiring
+#### Wiring
 
 ![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/9273f53b-699c-46c2-ab94-15fcf7f62ce8)
 
 
-### Code
+#### Code
 ```
 import time
 import board
@@ -183,25 +185,26 @@ time.sleep(5.0) # green led on for 5 secs
     
   ```
  
-### Reflection
+#### Reflection
 
 This assignment wasn't super hard. I used the code from the part above and then added what I knew about LEDS from last year to turn the green and red LED  on at the correct times. I wired up both of the LEDs and nmed one Red and Green so I didn't get confused and I was able to just put it into the cide because I remembered how to turn on an LED from past assignments.
-## Part 3
 
-### Assignment Description
+### Part 3
+
+#### Assignment Description
 
 For this part we had to press a button which would then get two LEDs to blink with the countdown, flashing red as it counts down from ten and then turns green when it prints "launch". 
 
-### Evidence 
+#### Evidence 
 
 ![ezgif com-optimize](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/384cad2e-5eac-4729-a733-671b42b083fc)
 
 
-### Wiring
+#### Wiring
 
 ![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/1d8b4772-412d-4ca4-b1e0-0f1792f9279d) 
 
-### Code
+#### Code
 ```
 # type: ignore
 import time
@@ -241,26 +244,26 @@ while True:
     prev_state = cur_state # reset button value to unpressed
   ```
  
-### Reflection
+#### Reflection
 
 This assignment wasn't super hard using my knowledge from last year I knew how to get a button to work. I just put the code for the button into my existing code from part 2. In the beginning the code wouldn't load onto the pico but I figured it out and realized it wasn't uploading to the D drive so once I fixed that it worked. 
 
-## Part 4
+### Part 4
 
-### Assignment Description
+#### Assignment Description
 
 For this part we had to press a button which would then get two LEDs to blink with the countdown, flashing red as it counts down from ten and then turns green and moves the servo when it "launches". 
 
-### Evidence 
+#### Evidence 
 
 ![ezgif com-optimize (3)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/d730d765-c9b4-47cd-9032-c1acf9051cdc)
 
 
-### Wiring
+#### Wiring
 
 ![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/82896b62-b3e1-4695-90cc-4005b2729d48)
 
-### Code
+#### Code
 ```
 # type: ignore
 import time
@@ -311,28 +314,28 @@ while True:
     prev_state = cur_state # reset button value to unpressed
   ```
  
-### Reflection
+#### Reflection
 
 This was the final part for this assignment, I used to code that I already had and added in code for a servo which I remembered from last year. It wasn't working and we realized that one of my wires wasn't going into the correct pin so after switching that it all worked together. This assignment was a good way to get into code. 
 
 
 ## Crash_Avoidance_Assignment
 
-## Part 1 
+### Part 1 
 
-### Assignment Description
+#### Assignment Description
 
 For this assignment we had to wire up an accelerometer and get it to print out the x, y, and z values on the serial monitor. 
 
-### Evidence 
+#### Evidence 
 
 ![ezgif com-crop (3)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/8844d422-a745-4fed-9fba-417db9241eea)
 
-### Wiring
+#### Wiring
 
 ![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/f3594102-ce2c-4bd0-8c28-24206cadcea1)
 
-### Code
+#### Code
 ```
 #type: ignore 
 
@@ -356,25 +359,25 @@ while True:
     time.sleep(1) # wait a second 
   ```
  
-### Reflection
+#### Reflection
 
 This was the first part of the Crash Avoidance assignment. I have never used accelerometer so I wasn't sure how to start. The canvas page was very helpful and gave me a link to see how to write f-strings, so after reading about how to wrote that code I was able to figure it out. My code wasn't working in the beginning but I got some help and realized I used the wrong bracket. After I fixed that the code worked. 
 
-## Part 2
+### Part 2
 
-### Assignment Description
+#### Assignment Description
 
 For this assignment we had to add on to what we did above and get an LED to light up when it is tilted 90 degress to either side and also wire up a JST battery so it can run without being connected to the computer. I used an if statement to turn on the LED when the accelerometer printed out a z value of 90 degrees.
 
-### Evidence 
+#### Evidence 
 
 ![My Project (3)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/65fec802-1e97-471b-b25c-d1711adbe4d3)
 
-### Wiring
+#### Wiring
 
 ![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/e487c724-7d94-43ce-ad2d-34ec5806a160)
 
-### Code
+#### Code
 ```
 #type: ignore 
 
@@ -407,24 +410,24 @@ while True:
         led.value = True # led is on if it is tilted to 90 degress
   ```
  
-### Reflection
+#### Reflection
 I was able to just use my code from part 1 and just add on an if statement and define the LED. I read some about if statements to remember how to do them and once I did I was able to writ eone. It was working but the light kept flashing when it was horizontal so I switched the signs and the when the LED would be True(on) and False(off). Overall this assignment wasn't too bad and it was good to do if statements again. 
 
-## Part 3
+### Part 3
 
-### Assignment Description
+#### Assignment Description
 
 This was the last part of the crash avoidance assignment. We had to put all three parts together and get the x, y, and z values to print out on a OLED screen.
 
-### Evidence 
+#### Evidence 
 
 ![My Project (7)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/85cc5ef4-1fa6-453a-a591-f5a9e6ec52ae)
 
-### Wiring
+#### Wiring
 
 ![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/a7f67a0b-b5e7-4dbe-98ec-b1d3fa155a8b)
 
-### Code
+#### Code
 ```
 #type: ignore 
 
@@ -479,58 +482,224 @@ while True:
 
   ```
  
-### Reflection
+#### Reflection
 This last part wasn't too bad, I was able to figure out how to write the code to print the values out on the screen, but when I tried uploading it wouldn't work. I got some help and we realized I just had a very sensitive wire so I just had to be careful not to mess up that wire so it wouldn't disconnect. After fixing that the code uploaded and it worked. Overall this assignment wasn't too bad it was good to continue getting back into code and trying new things I haven't coded yet. I learned how to code an OLED screen and throughout this assignment I learned how to use f-strings. I am now excited to start CAD!
+
+## Landing_Area_Assignment 
+
+### Part 1
+
+#### Assignment Description
+
+For this assignment we had to write a script that takes three coordinates and returns the area using a function.
+
+#### Evidence 
+
+![Capture](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/e2ffc129-f073-443c-8d92-a91eca0a0704)
+
+#### Wiring
+
+none 
+
+#### Code
+```
+import time
+
+def validate_input(input_string: str): # return false on error or an array of the form [x, y] on success
+    try:
+        input_parts = input_string.split(",") # a comma separates the coordinate points
+    except ValueError:
+        return False
+    if len(input_parts) != 2: # we expect an x and a y coordinate
+        return False
+    try:
+        result = [float(part) for part in input_parts] # turn the strings in input_parts into floats
+        return result
+    except ValueError: # if something wasn't a float
+        return False
+
+def get_area(p1, p2, p3): 
+    area = 0.5 * (p1[0] * (p2[1] - p3[1]) + p2[0] * (p3[1] - p1[1]) + p3[0] * (p1[1] - p2[1])) # math equation for area
+    return abs(area)
+
+while True:
+    vertex_1 = validate_input(input("Vertex 1: "))
+    if not vertex_1:
+        print("That was not the proper format. Please try again.")
+        continue    # serial print to enter coordinates and if the worng format is put return an error
+    vertex_2 = validate_input(input("Vertex 2: "))
+    if not vertex_2:
+        print("That was not the proper format. Please try again.")
+        continue
+    vertex_3 = validate_input(input("Vertex 3: "))
+    if not vertex_3:
+        print("That was not the proper format. Please try again.")
+        continue
+    area = get_area(vertex_1, vertex_2, vertex_3)   # call back to the math function plugging in the three points
+    print(f"The area of the triangle with vertices ({vertex_1[0]},{vertex_1[1]}), ({vertex_2[0]},{vertex_2[1]}), ({vertex_3[0]},{vertex_3[1]}) is {area} square km.")
+  ```
+ 
+#### Reflection
+This assignment was too bad, getting help from google and [River](https://github.com/rivques) code, I was able to easily trouble shoot and see why it wasn't working. My biggest problem was that it was just loading very slowly so it took forever to type in the coordinates but it worked well and printed out what I needed. 
+
+### Part 2
+
+#### Assignment Description
+
+For this assignment we had to write a script that takes three coordinates and returns the area using a function and plot the triangle on a onboard OLED screen relative to the base location.
+
+#### Evidence 
+
+![My Project (8)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/a8b41497-9122-45f5-af16-3032adc9cfe4)
+
+#### Wiring
+
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/5297f943-18ff-4571-9100-8adf44b70285)
+
+
+#### Code
+```
+#type: ignore
+
+import time
+import terminalio
+import displayio
+import busio    
+import board
+from adafruit_display_text import label
+import adafruit_displayio_ssd1306
+from adafruit_display_shapes.triangle import Triangle
+from adafruit_display_shapes.circle import Circle
+from adafruit_display_shapes.line import Line
+
+
+# init displays
+displayio.release_displays()
+
+# init i2c
+sda_pin = board.GP14
+scl_pin = board.GP15
+i2c = busio.I2C(scl_pin, sda_pin)
+
+# init display part 2
+display_bus = displayio.I2CDisplay(i2c, device_address=0x3d, reset=board.GP3)
+display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64)
+
+# create the display group
+splash = displayio.Group()
+
+# add base and coordinate axes
+splash.append(Circle(64, 32, 3, outline=0xFFFFFF))
+splash.append(Line(0, 32, 128, 32, 0xFFFFFF))
+splash.append(Line(64, 0, 64, 64, 0xFFFFFF))
+area_label = label.Label(terminalio.FONT, x=5, y=5, text="")
+# splash.append(Triangle(5, 5, 30, 30, 10, 30, outline=0xFFFFFF))
+splash.append(area_label)
+landing_area_display = None
+
+# send display group to screen
+display.show(splash)
+
+def validate_input(input_string: str): # return false on error or an array of the form [x, y] on success
+    try:
+        input_parts = input_string.split(",")
+    except ValueError:
+        return False
+    if len(input_parts) != 2: # we expect an x and a y coordinate
+        return False
+    try:
+        result = [float(part) for part in input_parts] # turn the strings in input_parts into floats
+        return result
+    except ValueError: 
+        return False
+
+def get_area(p1, p2, p3): # adapted from https://stackoverflow.com/questions/59597399
+    area = 0.5 * (p1[0] * (p2[1] - p3[1]) + p2[0] * (p3[1] - p1[1]) + p3[0]
+                  * (p1[1] - p2[1]))
+    return abs(area)
+
+while True:
+    vertex_1 = validate_input(input("Please input three triangle vertices in x,y format. Vertex 1: ")) # this is a little bit repetitive but i want to use continue here
+    if not vertex_1:
+        print("That was not the proper format. Please try again.")
+        continue
+    vertex_2 = validate_input(input("Vertex 2: "))
+    if not vertex_2:
+        print("That was not the proper format. Please try again.")
+        continue
+    vertex_3 = validate_input(input("Vertex 3: "))
+    if not vertex_3:
+        print("That was not the proper format. Please try again.")
+        continue
+    area = get_area(vertex_1, vertex_2, vertex_3)
+    print(f"The area of the triangle with vertices ({vertex_1[0]},{vertex_1[1]}), ({vertex_2[0]},{vertex_2[1]}), ({vertex_3[0]},{vertex_3[1]}) is {area} square km.")
+    area_label.text = f"{area:.2f}km2" # set the text that shows on the display
+    if landing_area_display is not None: # if we already have a triangle, get rid of it
+        splash.pop()
+    landing_area_display = Triangle(int(vertex_1[0])+64, 32-int(vertex_1[1]), int(vertex_2[0])+64, 32-int(vertex_2[1]), int(vertex_3[0])+64, 32-int(vertex_3[1]), outline=0xFFFFFF)
+    splash.append(landing_area_display) # show this triangle
+
+```
+ 
+#### Reflection
+This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print.  I added lines from my previous OLED assignment and with some help from my neighbors I was able to get the code working correctly. 
+
+
+# CAD
 
 ## FEA_Beam
 
-## FEA_Part_1 
+### FEA_Part_1 
 
-### Assignment Description
+#### Assignment Description
 For this assignement we were partnered up and required to make the strongest beam we could with any prior knowledge. They would then be tested as we add weight to a bucket. The bucket had to hang 180mm away from the base and it had to weight a maximum of 13 grams.  
 
-### Part Link 
+#### Part Link 
 
 [Link to OnShape Document](https://cvilleschools.onshape.com/documents/8b325fcbf1fc9ced667a46ad/w/244fda1d4dd423e6920295c5/e/da5820986e36d6e64f72469d?renderMode=0&uiState=651c4898682dbd1154ff7054)
 
-### Part Image
+#### Part Image
 
 ![Beam Starter + Holder (1)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/e544fb58-9bc6-48a1-bf78-4421a7003cab)
 ![Beam Starter + Holder](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/6d120254-8b42-4404-98a4-d1a67529a0ab)
 
 
-### Reflection
+#### Reflection
 
 When starting this assignment we had the idea to make a I beam because it seemed to be the strongest, however we realized that there would be a lot of overhang and the beam would not be able to print. So we pivoted our idea and realized that triangles are the strongest shape. We made a long triangular prism with supporting beams inside. It matched the requirement for 180mm but it was too heavy. WE had to make the walls a lot thinner and cut out a lot of holes so it would be 13 grams. Overall this assignment was fun and a good way to get back into CAD and we can't wait to see how well it works. 
 
 
-## FEA_Part_2/3
+### FEA_Part_2/3
 
-### Assignment Description
+#### Assignment Description
 We learned how to do a simulation on Onshape called FEA which shows the weakest and strongest parts of a desgin when force is applied. 
 
-### Part Link 
+#### Part Link 
 
 [Link to OnShape Document](https://cvilleschools.onshape.com/documents/8b325fcbf1fc9ced667a46ad/w/244fda1d4dd423e6920295c5/e/da5820986e36d6e64f72469d?renderMode=0&uiState=651c4898682dbd1154ff7054)
 
-### Part Image
+#### Part Image
 ![Assembly 1 (1)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/39202830-fd05-4bbc-83b5-1d62d99b433c)
 ![Assembly 1 (2)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/4f51f6cd-e556-4d24-a891-ead528de8e5b)
 ![Assembly 1](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/25e762aa-cc76-4c3b-a7d2-02801b0c0838)
 ![Assembly 1 (3)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/f193720c-f05c-4be0-8003-15ed7fc8370f)
 
 
-### Reflection
+#### Reflection
 
 Our design is very good with most of the stress being at the point that connects to the base. The structural beams inside where very helpful to support the fore. We just need to reinforce the points of the triangle that are close to the base so it doesn't snap. 
 
-## FEA_Part_4
+### FEA_Part_4
 
-### Part Link 
+#### Assignment Description
+
+After knowing the weakest points in our design we had to work to make it better to haave less displacement in our beam for the areas that the FEA simulation showed were weak.
+
+#### Part Link 
 
 [Link to OnShape Document](https://cvilleschools.onshape.com/documents/8b325fcbf1fc9ced667a46ad/w/244fda1d4dd423e6920295c5/e/da5820986e36d6e64f72469d?renderMode=0&uiState=651c4898682dbd1154ff7054)
 
-### Part Image
+#### Part Image
 
 ![Assembly 1 (5)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/6edb8424-2db6-4bd4-a8f1-5fa8272c07fb)
 ![Assembly 1 (9)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/d17533c0-c10e-4da3-bf17-ea3c5950bb66)
@@ -538,6 +707,8 @@ Our design is very good with most of the stress being at the point that connects
 ![Assembly 1 (10)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/3d8094fd-4755-4261-8f7d-98da82d39743)
 ![Assembly 1 (8)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/8eacc8b7-5bf5-438b-a693-ea49dab8aee9)
 
-### Reflection
+#### Reflection
 
 Our beam was already pretty good with not a lot of yellow so it was kind of hard to improve. To improve our beam we added more support to the walls closest the the holder, so it wouldn't break as easily. We also thickend some of the walls were there was the most yellow. Doing that added more weight so we had to create more holes to remove the weight. We hope that this will improve our beam and overall it was a fun project!
+
+
