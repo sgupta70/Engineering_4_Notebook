@@ -642,7 +642,7 @@ while True:
 ```
  
 #### Reflection
-This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print.
+This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print.  I added lines from my previous OLED assignment and with some help from my neighbors I was able to get the code working correctly. 
 
 
 # CAD
