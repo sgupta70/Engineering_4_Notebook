@@ -642,8 +642,70 @@ while True:
 ```
  
 #### Reflection
-This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print.  I added lines from my previous OLED assignment and with some help from my neighbors I was able to get the code working correctly. 
+This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print. I added lines from my previous OLED assignment and with some help from my neighbors I was able to get the code working correctly. 
 
+## Morse Code
+
+### Part 1
+
+#### Assignment Description
+
+For this assignment we had to write a morse code translator and print those dots and dashes to the serial monitor. 
+
+#### Evidence 
+
+![My Project (9)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/c77db802-484d-41cf-8e41-4baa16e4594d)
+
+#### Wiring
+
+none
+
+#### Code
+```
+
+import time
+
+MORSE_CODE = { 'A':'.-', 'B':'-...',
+    'C':'-.-.', 'D':'-..', 'E':'.',
+    'F':'..-.', 'G':'--.', 'H':'....',
+    'I':'..', 'J':'.---', 'K':'-.-',
+    'L':'.-..', 'M':'--', 'N':'-.',
+    'O':'---', 'P':'.--.', 'Q':'--.-',
+    'R':'.-.', 'S':'...', 'T':'-',
+    'U':'..-', 'V':'...-', 'W':'.--',
+    'X':'-..-', 'Y':'-.--', 'Z':'--..',
+    '1':'.----', '2':'..---', '3':'...--',
+    '4':'....-', '5':'.....', '6':'-....',
+    '7':'--...', '8':'---..', '9':'----.',
+    '0':'-----', ', ':'--..--', '.':'.-.-.-',
+    '?':'..--..', '/':'-..-.', '-':'-....-',
+    '(':'-.--.', ')':'-.--.-'} # numbers and letters and what they are in morse code 
+while True:
+    user_input = input("Enter the string to translate, or type '-q' to quit. ") #prints out a space for you to type words in moniter
+    user_input = user_input.upper()
+    if user_input == "-X":
+        break #everything stops if you type -x in
+    morse_translation = ""
+    translation_good = True
+    for letter in user_input:
+        if letter == " ":
+            morse_translation += "/" #if you put a space it will make a break 
+        else:
+            try:
+                morse_translation += MORSE_CODE[letter] + " "
+            except KeyError:
+                print(f"Unsupported character \"{letter}\" used. Please try again.") #if you put in a letter that can't work it will tell you
+                translation_good = False
+                break
+    if translation_good:
+        print(morse_translation) # print out the word in morse code 
+            
+print("done")
+
+```
+ 
+#### Reflection
+This was the first time I have used morse code, but we were given the dictionary which was really nice. Writing the code wasn't terrible it was just a bunch of if statements and loops. I just had to know how to print it out and with the help of my neighbors and google I was able to get it working.  
 
 # CAD
 
