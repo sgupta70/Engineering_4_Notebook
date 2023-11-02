@@ -1,6 +1,6 @@
 
 import time
-
+#These are all the letters and numbers translated
 MORSE_CODE = { 'A':'.-', 'B':'-...',
     'C':'-.-.', 'D':'-..', 'E':'.',
     'F':'..-.', 'G':'--.', 'H':'....',
@@ -15,7 +15,7 @@ MORSE_CODE = { 'A':'.-', 'B':'-...',
     '7':'--...', '8':'---..', '9':'----.',
     '0':'-----', ', ':'--..--', '.':'.-.-.-',
     '?':'..--..', '/':'-..-.', '-':'-....-',
-    '(':'-.--.', ')':'-.--.-'} # numbers and letters and what they are in morse code 
+    '(':'-.--.', ')':'-.--.-'}
 while True:
     user_input = input("Enter the string to translate, or type '-q' to quit. ") #prints out a space for you to type words in moniter
     user_input = user_input.upper()
@@ -34,6 +34,6 @@ while True:
                 translation_good = False
                 break
     if translation_good:
-        print(morse_translation) # print out the word in morse code 
+        print(morse_translation) 
             
 print("done")
