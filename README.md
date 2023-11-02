@@ -685,19 +685,19 @@ while True:
     user_input = user_input.upper()
     if user_input == "-X":
         break #everything stops if you type -x in
-    morse_translation = ""
-    translation_good = True
+    morse = ""
+    translationworks = True
     for letter in user_input:
         if letter == " ":
-            morse_translation += "/" #if you put a space it will make a break 
+            morse += "/" #if you put a space it will make a break 
         else:
             try:
-                morse_translation += MORSE_CODE[letter] + " "
+                morse += MORSE_CODE[letter] + " "
             except KeyError:
                 print(f"Unsupported character \"{letter}\" used. Please try again.") #if you put in a letter that can't work it will tell you
-                translation_good = False
+                translationworks = False
                 break
-    if translation_good:
+    if translationworks:
         print(morse_translation) # print out the word in morse code 
             
 print("done")
