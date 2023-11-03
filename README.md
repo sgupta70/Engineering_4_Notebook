@@ -679,9 +679,9 @@ MORSE_CODE = { 'A':'.-', 'B':'-...',
     '7':'--...', '8':'---..', '9':'----.',
     '0':'-----', ', ':'--..--', '.':'.-.-.-',
     '?':'..--..', '/':'-..-.', '-':'-....-',
-    '(':'-.--.', ')':'-.--.-'} # numbers and letters and what they are in morse code 
+    '(':'-.--.', ')':'-.--.-'} # numbers and letters tasnlated to morse code 
 while True:
-    user_input = input("Enter the string to translate, or type '-q' to quit. ") #prints out a space for you to type words in moniter
+    user_input = input("Enter the string to translate, or type '-x' to quit. ") 
     user_input = user_input.upper()
     if user_input == "-X":
         break #everything stops if you type -x in
