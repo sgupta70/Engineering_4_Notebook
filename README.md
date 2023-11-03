@@ -707,6 +707,92 @@ print("done")
 #### Reflection
 This was the first time I have used morse code, but we were given the dictionary which was really nice. Writing the code wasn't terrible it was just a bunch of if statements and loops. I just had to know how to print it out and with the help of my neighbors and google I was able to get it working.  
 
+### Part 1
+
+#### Assignment Description
+
+For this assignment we had to add onto the assignment before, after getting the morse code to print on the serial monitor I had to get the morse code to flash on the led. 
+
+#### Evidence 
+
+![My Project (10)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/13c28976-d3d9-41a6-ad45-238896a0f067)
+
+#### Wiring
+
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/910b2bb8-0885-423c-a6e0-61c47d446fae)
+
+#### Code
+```
+
+# type: ignore
+
+import board
+import digitalio
+import time
+
+MORSE_CODE = { 'A':'.-', 'B':'-...',
+    'C':'-.-.', 'D':'-..', 'E':'.',
+    'F':'..-.', 'G':'--.', 'H':'....',
+    'I':'..', 'J':'.---', 'K':'-.-',
+    'L':'.-..', 'M':'--', 'N':'-.',
+    'O':'---', 'P':'.--.', 'Q':'--.-',
+    'R':'.-.', 'S':'...', 'T':'-',
+    'U':'..-', 'V':'...-', 'W':'.--',
+    'X':'-..-', 'Y':'-.--', 'Z':'--..',
+    '1':'.----', '2':'..---', '3':'...--',
+    '4':'....-', '5':'.....', '6':'-....',
+    '7':'--...', '8':'---..', '9':'----.',
+    '0':'-----', ', ':'--..--', '.':'.-.-.-',
+    '?':'..--..', '/':'-..-.', '-':'-....-',
+    '(':'-.--.', ')':'-.--.-'} # letters and numbers in morse code 
+
+led = digitalio.DigitalInOut(board.GP14)
+led.direction = digitalio.Direction.OUTPUT # led as an output on GP14
+
+modifier = 0.25 # base delay for led
+
+delayz = {
+    ".": 1*modifier,
+    "-": 3*modifier,
+    " ": 3*modifier,
+    "/": 7*modifier # time in between flashes for each character
+}
+
+while True:
+    user_input = input("Enter the string to translate, or type '-x' to quit. ")
+    user_input = user_input.upper() # lowercase to uppercase
+    if user_input == "-X": # uppercase because of the previous line
+        break # if you input x it quits
+    morse_translation = ""
+    translation_good = True # flag to be set if we hit an unknown character
+    for letter in user_input:
+        if letter == " ":
+            morse_translation += "/" # a space in the input translates to a break or "/" in morse
+        else:
+            try:
+                morse_translation += MORSE_CODE[letter] + " " # for spaces between characters
+            except KeyError:
+                print(f"Unsupported character \"{letter}\" used.") # print if theres something wrong
+                translation_good = False
+                break # go to next line
+    if translation_good:
+        print(morse_translation) # print the translation is everything looks good
+        for character in morse_translation:
+            on_delay = delayz[character]
+            off_delay = delayz[character] # import the delays from the if statement
+            if on_delay == 0:
+                time.sleep(off_delay)
+            else:
+                led.value = True
+                time.sleep(on_delay)
+                led.value = False
+                time.sleep(off_delay) 
+
+```
+ 
+#### Reflection
+This was the first time I have used morse code, but we were given the dictionary which was really nice. Writing the code wasn't terrible it was just a bunch of if statements and loops. I just had to know how to print it out and with the help of my neighbors and google I was able to get it working.  
+
 # CAD
 
 ## FEA_Beam
