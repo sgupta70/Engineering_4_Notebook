@@ -9,6 +9,7 @@
 * [Launch_Pad_Assignment](#launch_pad_assignment)
 * [Crash_Avoidance_Assignment](#crash_avoidance_assignment)
 * [Landing_Area_Assignment](#landing_area_assignment)
+* [Morse_Code](#morse_code)
 * [FEA_Beam](#fea_beam)
 
 
@@ -644,7 +645,7 @@ while True:
 #### Reflection
 This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print. I added lines from my previous OLED assignment and with some help from my neighbors I was able to get the code working correctly. 
 
-## Morse Code
+## Morse_Code
 
 ### Part 1
 
@@ -707,7 +708,7 @@ print("done")
 #### Reflection
 This was the first time I have used morse code, but we were given the dictionary which was really nice. Writing the code wasn't terrible it was just a bunch of if statements and loops. I just had to know how to print it out and with the help of my neighbors and google I was able to get it working.  
 
-### Part 1
+### Part 2
 
 #### Assignment Description
 
