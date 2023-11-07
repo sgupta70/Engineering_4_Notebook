@@ -651,7 +651,8 @@ This assignment was just adding on from what we did above so the code wasn't bad
 
 #### Assignment Description
 
-For this assignment we had to write a morse code translator and print those dots and dashes to the serial monitor. 
+For this assignment we had to write a morse code translator and print those dots and dashes to the serial monitor. The script must accept text input and if you type anything else, your script must translate the text to morse code dots and dashes, and print those to the monitor. The printed text must use a space to show breaks between letters, and a slash to show breaks between words. 
+
 
 #### Evidence 
 
@@ -682,10 +683,10 @@ MORSE_CODE = { 'A':'.-', 'B':'-...',
     '?':'..--..', '/':'-..-.', '-':'-....-',
     '(':'-.--.', ')':'-.--.-'} # numbers and letters tasnlated to morse code 
 while True:
-    user_input = input("Enter the string to translate, or type '-x' to quit. ") 
+    user_input = input("Enter the string to translate, or type '-q' to quit. ") 
     user_input = user_input.upper()
-    if user_input == "-X":
-        break #everything stops if you type -x in
+    if user_input == "-q":
+        break #everything stops if you type -q in
     morse = ""
     translationworks = True
     for letter in user_input:
@@ -706,7 +707,7 @@ print("done")
 ```
  
 #### Reflection
-This was the first time I have used morse code, but we were given the dictionary which was really nice. Writing the code wasn't terrible it was just a bunch of if statements and loops. I just had to know how to print it out and with the help of my neighbors and google I was able to get it working.  
+This was the first time I have used morse code, but we were given the dictionary which was really nice. The code wasn't bad because it was just if statements and I learned to make a space you use += instead of just =. With the help from my neighbors I was able to get my code up and running.
 
 ### Part 2
 
