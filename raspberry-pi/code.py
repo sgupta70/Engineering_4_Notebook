@@ -1,14 +1,9 @@
-#type: ignore
+# type: ignore
 
-import time
 import board
 import digitalio
+import time
 
-led = digitalio.DigitalInOut(board.GP1) #where the LED is connected
-led.direction = digitalio.Direction.OUTPUT
-
-
-#These are all the letters and numbers translated
 MORSE_CODE = { 'A':'.-', 'B':'-...',
     'C':'-.-.', 'D':'-..', 'E':'.',
     'F':'..-.', 'G':'--.', 'H':'....',
@@ -23,42 +18,46 @@ MORSE_CODE = { 'A':'.-', 'B':'-...',
     '7':'--...', '8':'---..', '9':'----.',
     '0':'-----', ', ':'--..--', '.':'.-.-.-',
     '?':'..--..', '/':'-..-.', '-':'-....-',
-    '(':'-.--.', ')':'-.--.-'}
-base_delay = 0.25
-CHAR_DELAYS = {
-    ".": [base_delay, base_delay],
-    "-": [3*base_delay, base_delay],
-    " ": [0, 3*base_delay],
-    "/": [0, 7*base_delay]
+    '(':'-.--.', ')':'-.--.-'} # dictionary
+
+led = digitalio.DigitalInOut(board.GP16)
+led.direction = digitalio.Direction.OUTPUT # led as an output on gp16
+
+modifier = 0.25 # base delay for led
+
+delayz = {
+    ".": 1*modifier,
+    "-": 3*modifier,
+    " ": 3*modifier,
+    "/": 7*modifier # time in between flashes for each character
 }
 
 while True:
-    user_input = input("Enter the string to translate, or type '-q' to quit. ") #prints out a space for you to type words in moniter
-    user_input = user_input.upper()
+    user_input = input("Enter the string to translate, or type '-q' to quit. ")
+    user_input = user_input.upper() # change lowercase to uppercase
     if user_input == "-Q": # uppercase because of the previous line
-        break #everything stops if you type -q in
+        break # if you input q it quits
     morse_translation = ""
     translation_good = True # flag to be set if we hit an unknown character
     for letter in user_input:
         if letter == " ":
-            morse_translation += "/" #if you put a space, it makes a break
+            morse_translation += "/" # a space in the input translates to a break or "/" in morse
         else:
             try:
-                morse_translation += MORSE_CODE[letter] + " "
+                morse_translation += MORSE_CODE[letter] + " " # for spaces between characters
             except KeyError:
-                print(f"Unsupported character \"{letter}\" used. Please try again.") #if you put in a letter that isn't in the above definitions, it tells you
+                print(f"Unsupported character \"{letter}\" used. Please try again.") # if there's an error type this
                 translation_good = False
-                break #everything stop
+                break # go to next line
     if translation_good:
-        print(morse_translation)
-        for pulse in morse_translation:
-            on_delay, off_delay = CHAR_DELAYS[pulse]
-            if on_delay == 0: # bypass ever turning the LED on
+        print(morse_translation) # if nothing goes wrong print the translation
+        for character in morse_translation:
+            on_delay = delayz[character]
+            off_delay = delayz[character] # import the delays I set earlier into this if statement
+            if on_delay == 0:
                 time.sleep(off_delay)
             else:
                 led.value = True
                 time.sleep(on_delay)
                 led.value = False
-                time.sleep(off_delay)
-            
-print("Thanks for using the Morse Code Translator. Goodbye!")
+                time.sleep(off_delay) # blinky blinky for the led based on timing
