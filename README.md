@@ -793,7 +793,7 @@ while True:
 ```
  
 #### Reflection
-This was the first time I have used morse code, but we were given the dictionary which was really nice. Writing the code wasn't terrible it was just a bunch of if statements and loops. I just had to know how to print it out and with the help of my neighbors and google I was able to get it working.  
+This assignment wasn't that bad, I used the code from the assignment before and then I already knew how to code an LED, the only difficult thing was to get the LED to either blink or flash which I got help from google and my neighbors. The wiring was super simple because I've wired an LED so many times. Overall this assignment wasn't bad and it was fun to learn morse code.
 
 # CAD
 
