@@ -807,7 +807,7 @@ For this year our project is to launch a Pi into the sky and get it to record da
 
 #### Evidence 
 
-![My Project (9)](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/c77db802-484d-41cf-8e41-4baa16e4594d)
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/3f8b8a65-b36a-4644-ac1e-987284b63d94)
 
 #### Wiring
 
@@ -827,10 +827,8 @@ import storage # imports
 
 displayio.release_displays() # this needs to be first in the code
 
-led1 = digitalio.DigitalInOut(board.GP16) 
+led1 = digitalio.DigitalInOut(board.GP1) 
 led1.direction = digitalio.Direction.OUTPUT
-led2 = digitalio.DigitalInOut(board.LED)
-led2.direction = digitalio.Direction.OUTPUT
 sda_pin = board.GP14
 scl_pin = board.GP15
 i2c = busio.I2C(scl_pin, sda_pin) 
@@ -861,7 +859,23 @@ while True:
 ```
  
 #### Reflection
-This assignment was too bad because we already had most of the code written from the Crash Avoidance assignment
+This assignment was too bad because we already had most of the code written from the Crash Avoidance assignment. The boot.py code was already given to us and I needed to make sure to save it correctly because that allows you to switch from "code" to "data" mode. 
+
+### Part 2 
+
+#### Assignment Description
+For this part all we needed to do was grpah the x, y and z values on a line graph and the when the pico was tilted/when the led was on on a column graph. 
+
+#### Evidence 
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/24e63a8e-1529-475e-bcc1-a4b71320a021)
+
+#### Code 
+none 
+
+#### Wiring 
+none 
+
+#### Reflection 
 
 # CAD
 
