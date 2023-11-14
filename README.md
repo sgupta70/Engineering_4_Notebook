@@ -804,14 +804,13 @@ This assignment wasn't that bad, I used the code from the assignment before and 
 
 For this year our project is to launch a Pi into the sky and get it to record data so this assignment helped us learn how to save the data when it is not plugged into the computer. We needed to take data from your accelerometer, store it onboard the Pico, and then open it on your computer. 
 
-
 #### Evidence 
 
 ![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/3f8b8a65-b36a-4644-ac1e-987284b63d94)
 
 #### Wiring
 
-none
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/90256589-3ef9-4320-aa7e-c0409fa5755f)
 
 #### Code
 ```
@@ -859,7 +858,7 @@ while True:
 ```
  
 #### Reflection
-This assignment was too bad because we already had most of the code written from the Crash Avoidance assignment. The boot.py code was already given to us and I needed to make sure to save it correctly because that allows you to switch from "code" to "data" mode. 
+This assignment was too bad because we already had most of the code written from the Crash Avoidance assignment. The boot.py code was already given to us and I needed to make sure to save it correctly because that allows you to switch from "code" to "data" mode. When it is in data mode you can collet data when it is unplugged and it code mode you can edit the code. There wasn't a ton of code towrite I just needed to understand how to collect the data and then open in up in an EXCEL.
 
 ### Part 2 
 
@@ -868,6 +867,7 @@ For this part all we needed to do was grpah the x, y and z values on a line grap
 
 #### Evidence 
 ![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/24e63a8e-1529-475e-bcc1-a4b71320a021)
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/1f5b63b4-aaae-4e65-b7ea-8db12b208f7a)
 
 #### Code 
 none 
@@ -876,6 +876,7 @@ none
 none 
 
 #### Reflection 
+This part wasn't hard all I needed to do was graph the data I already had stored. I was able to copy and paste it over to google sheets and use their charts to make my two graphs. 
 
 # CAD
 
