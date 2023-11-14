@@ -810,7 +810,7 @@ For this year our project is to launch a Pi into the sky and get it to record da
 
 #### Wiring
 
-![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/90256589-3ef9-4320-aa7e-c0409fa5755f)
+![image](https://github.com/sgupta70/Engineering_4_Notebook/assets/71406903/6494bacc-6dc1-4517-8f67-7a7731217999)
 
 #### Code
 ```
