@@ -802,7 +802,7 @@ This assignment wasn't that bad, I used the code from the assignment before and 
 
 #### Assignment Description
 
-For this assignment we had to write a morse code translator and print those dots and dashes to the serial monitor. The script must accept text input and if you type anything else, your script must translate the text to morse code dots and dashes, and print those to the monitor. The printed text must use a space to show breaks between letters, and a slash to show breaks between words. 
+For this year our project is to launch a Pi into the sky and get it to record data so this assignment helped us learn how to save the data when it is not plugged into the computer. We needed to take data from your accelerometer, store it onboard the Pico, and then open it on your computer. 
 
 
 #### Evidence 
@@ -849,9 +849,9 @@ while True:
             csv_string = f"{time_elapsed},{acc[0]},{acc[1]},{acc[2]},{led1.value}\n"
             # f string showing time, acc, and whether or not it's tilted
             datalog.write(csv_string)
-            led2.value = True
+            led1.value = True
             time.sleep(0.1)
-            led2.value = False
+            led1.value = False
             time.sleep(0.1) # blink led to show switch between modes
             datalog.flush() # record to the datalog
             time.sleep(0.25)
@@ -861,7 +861,7 @@ while True:
 ```
  
 #### Reflection
-This was the first time I have used morse code, but we were given the dictionary which was really nice. The code wasn't bad because it was just if statements and I learned to make a space you use += instead of just =. With the help from my neighbors I was able to get my code up and running.
+This assignment was too bad because we already had most of the code written from the Crash Avoidance assignment
 
 # CAD
 
