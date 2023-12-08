@@ -845,7 +845,7 @@ while True:
 ```
  
 #### Reflection
-This assignment was too bad because we already had most of the code written from the Crash Avoidance assignment. The boot.py code was already given to us and I needed to make sure to save it correctly because that allows you to switch from "code" to "data" mode. When it is in data mode you can collet data when it is unplugged and it code mode you can edit the code. There wasn't a ton of code towrite I just needed to understand how to collect the data and then open in up in an EXCEL. I also got help from the people sitting next to me to put my f" strings into one, and I got help from [Cooper's code](ttps://github.com/Cooper-Moreland)
+This assignment was too bad because we already had most of the code written from the Crash Avoidance assignment. The boot.py code was already given to us and I needed to make sure to save it correctly because that allows you to switch from "code" to "data" mode. When it is in data mode you can collet data when it is unplugged and it code mode you can edit the code. There wasn't a ton of code towrite I just needed to understand how to collect the data and then open in up in an EXCEL. I also got help from the people sitting next to me to put my f" strings into one, and I got help from [Cooper's code](https://github.com/Cooper-Moreland) 
 
 ### Part 2 
 
