@@ -101,10 +101,10 @@ led = digitalio.DigitalInOut(board.LED)
 led.direction = digitalio.Direction.OUTPUT 
 
 while True: 
-    led.value = True 
-    time.sleep(0.5)
-    led.value = False 
-    time.sleep(0.5)
+    led.value = True # turn led on
+    time.sleep(0.5) # wait a half second 
+    led.value = False # turn led off
+    time.sleep(0.5) # wait a half second 
   ```
  [Code](https://github.com/sgupta70/Engineering_4_Notebook/blob/main/LED_blink.py)
  
@@ -177,12 +177,12 @@ ledGreen.direction = digitalio.Direction.OUTPUT # red and green led output locat
 
 for x in range(10, 0, -1): # in the range from 10 to 0 going down by 1
     print(x) # print the variable
-    ledRed.value = True
+    ledRed.value = True # turn red led on
     time.sleep(0.5)
-    ledRed.value = False
+    ledRed.value = False # turn red led off 
     time.sleep(0.5) # blink red led
 print("Launch")
-ledGreen.value = True
+ledGreen.value = True # turn green led on
 time.sleep(5.0) # green led on for 5 secs
     
   ```
@@ -232,18 +232,18 @@ while True:
             print("Button pushed")
             for x in range(10, 0, -1): # in the range from 10 to 0 going down by 1
                 print(x) # print the variable
-                ledRed.value = True
+                ledRed.value = True # turn red led on
                 time.sleep(0.5)
-                ledRed.value = False
-                time.sleep(0.5) # blink red led
-            ledGreen.value = True 
-            print("Launch")
+                ledRed.value = False # turn red led off 
+                time.sleep(0.5)
+            ledGreen.value = True # turn green led on 
+            print("Launch") 
             time.sleep(3.0)
-            ledGreen.value = False # turn on green light and print launch then turn the light off after 3 seconds
+            ledGreen.value = False # turn green led off 
         else:
             print("Button is up")
 
-    prev_state = cur_state # reset button value to unpressed
+    prev_state = cur_state # reset button value 
   ```
  
 #### Reflection
@@ -293,27 +293,27 @@ while True:
     cur_state = btn.value # new variable
     if cur_state != prev_state: # if the state of the button changes
         if not cur_state: # if the button is pressed
-            print("Button pushed")
+            print("button pressed")
             for x in range(10, 0, -1): # in the range from 10 to 0 going down by 1
                 print(x) # print the variable
-                ledRed.value = True
+                ledRed.value = True # turn red led on
                 time.sleep(0.5)
-                ledRed.value = False
-                time.sleep(0.5) # blink red led
-            ledGreen.value = True 
+                ledRed.value = False # turn red led off
+                time.sleep(0.5) 
+            ledGreen.value = True # turn green led on
             print("Launch")
-            for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time.
+            for angle in range(0, 180, 1):  # 0 - 180 degrees, 1 degrees at a time.
                 my_servo.angle = angle
                 time.sleep(0.05)
             time.sleep(3.0)
             ledGreen.value = False # turn on green light and print launch then turn the light off after 3 seconds
-            for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time.
-                my_servo.angle = angle
+            for angle in range(180, 0, -1): # 180 - 0 degrees, 1 degrees at a time.
+                my_servo.angle = angle # bring servo back to reset
             time.sleep(0.05)
         else:
-            print("Button is up")
+            print("button done")
 
-    prev_state = cur_state # reset button value to unpressed
+    prev_state = cur_state # reset button value
   ```
  
 #### Reflection
@@ -466,11 +466,7 @@ title = "ANGULAR VELOCITY"
 text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=5)
 splash.append(text_area)    
 
-# you will write more code here that prints the x, y, and z angular velocity values to the screen below the title. Use f strings!
-# Don't forget to round the angular velocity values to three decimal places
-
-# send display group to screen
-display.show(splash)
+display.show(splash) # send display group to screen
 
 while True:   
     mpu.gyro
@@ -507,9 +503,9 @@ none
 ```
 import time
 
-def validate_input(input_string: str): # return false on error or an array of the form [x, y] on success
+def validate_input(input_string: str): # return false on error or an array of the form [x, y]
     try:
-        input_parts = input_string.split(",") # a comma separates the coordinate points
+        input_parts = input_string.split(",") 
     except ValueError:
         return False
     if len(input_parts) != 2: # we expect an x and a y coordinate
@@ -517,32 +513,32 @@ def validate_input(input_string: str): # return false on error or an array of th
     try:
         result = [float(part) for part in input_parts] # turn the strings in input_parts into floats
         return result
-    except ValueError: # if something wasn't a float
+    except ValueError:
         return False
 
 def get_area(p1, p2, p3): 
-    area = 0.5 * (p1[0] * (p2[1] - p3[1]) + p2[0] * (p3[1] - p1[1]) + p3[0] * (p1[1] - p2[1])) # math equation for area
+    area = 0.5 * (p1[0] * (p2[1] - p3[1]) + p2[0] * (p3[1] - p1[1]) + p3[0] * (p1[1] - p2[1])) # find area 
     return abs(area)
 
 while True:
     vertex_1 = validate_input(input("Vertex 1: "))
     if not vertex_1:
-        print("That was not the proper format. Please try again.")
-        continue    # serial print to enter coordinates and if the worng format is put return an error
+        print("Not Correct, try again.")# print error if doesn't work 
+        continue    
     vertex_2 = validate_input(input("Vertex 2: "))
     if not vertex_2:
-        print("That was not the proper format. Please try again.")
+        print("Not Correct, try again."")
         continue
     vertex_3 = validate_input(input("Vertex 3: "))
     if not vertex_3:
-        print("That was not the proper format. Please try again.")
+        print("Not Correct, try again."")
         continue
-    area = get_area(vertex_1, vertex_2, vertex_3)   # call back to the math function plugging in the three points
+    area = get_area(vertex_1, vertex_2, vertex_3)   # put points into area equation 
     print(f"The area of the triangle with vertices ({vertex_1[0]},{vertex_1[1]}), ({vertex_2[0]},{vertex_2[1]}), ({vertex_3[0]},{vertex_3[1]}) is {area} square km.")
   ```
  
 #### Reflection
-This assignment was too bad, getting help from google and [River](https://github.com/rivques) code, I was able to easily trouble shoot and see why it wasn't working. My biggest problem was that it was just loading very slowly so it took forever to type in the coordinates but it worked well and printed out what I needed. 
+This assignment was too bad, getting help from the people next to me and using parts of [River's code](https://github.com/rivques) code, I was able to easily trouble shoot and see why it wasn't working. My biggest problem was that it was just loading very slowly so it took forever to type in the coordinates but it worked well and printed out what I needed. 
 
 ### Part 2
 
@@ -583,26 +579,20 @@ sda_pin = board.GP14
 scl_pin = board.GP15
 i2c = busio.I2C(scl_pin, sda_pin)
 
-# init display part 2
 display_bus = displayio.I2CDisplay(i2c, device_address=0x3d, reset=board.GP3)
 display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64)
 
-# create the display group
 splash = displayio.Group()
 
-# add base and coordinate axes
 splash.append(Circle(64, 32, 3, outline=0xFFFFFF))
 splash.append(Line(0, 32, 128, 32, 0xFFFFFF))
 splash.append(Line(64, 0, 64, 64, 0xFFFFFF))
 area_label = label.Label(terminalio.FONT, x=5, y=5, text="")
-# splash.append(Triangle(5, 5, 30, 30, 10, 30, outline=0xFFFFFF))
 splash.append(area_label)
 landing_area_display = None
-
-# send display group to screen
 display.show(splash)
 
-def validate_input(input_string: str): # return false on error or an array of the form [x, y] on success
+def validate_input(input_string: str): # return false on error or an array of the form [x, y]
     try:
         input_parts = input_string.split(",")
     except ValueError:
@@ -610,49 +600,46 @@ def validate_input(input_string: str): # return false on error or an array of th
     if len(input_parts) != 2: # we expect an x and a y coordinate
         return False
     try:
-        result = [float(part) for part in input_parts] # turn the strings in input_parts into floats
+        result = [float(part) for part in input_parts] 
         return result
     except ValueError: 
         return False
 
-def get_area(p1, p2, p3): # adapted from https://stackoverflow.com/questions/59597399
-    area = 0.5 * (p1[0] * (p2[1] - p3[1]) + p2[0] * (p3[1] - p1[1]) + p3[0]
-                  * (p1[1] - p2[1]))
+def get_area(p1, p2, p3):
+    area = 0.5 * (p1[0] * (p2[1] - p3[1]) + p2[0] * (p3[1] - p1[1]) + p3[0] * (p1[1] - p2[1]))
     return abs(area)
 
 while True:
-    vertex_1 = validate_input(input("Please input three triangle vertices in x,y format. Vertex 1: ")) # this is a little bit repetitive but i want to use continue here
+    vertex_1 = validate_input(input("Please input three triangle vertices in x,y format. Vertex 1: "))
     if not vertex_1:
-        print("That was not the proper format. Please try again.")
+        print("Not Correct, try again.") # if the format doesn't work print this
         continue
     vertex_2 = validate_input(input("Vertex 2: "))
     if not vertex_2:
-        print("That was not the proper format. Please try again.")
+        print("Not Correct, try again."")
         continue
     vertex_3 = validate_input(input("Vertex 3: "))
     if not vertex_3:
-        print("That was not the proper format. Please try again.")
+        print("Not Correct, try again."")
         continue
-    area = get_area(vertex_1, vertex_2, vertex_3)
+    area = get_area(vertex_1, vertex_2, vertex_3) # put points into area equation 
     print(f"The area of the triangle with vertices ({vertex_1[0]},{vertex_1[1]}), ({vertex_2[0]},{vertex_2[1]}), ({vertex_3[0]},{vertex_3[1]}) is {area} square km.")
     area_label.text = f"{area:.2f}km2" # set the text that shows on the display
-    if landing_area_display is not None: # if we already have a triangle, get rid of it
+    if landing_area_display is not None: # get rid of triangle if there was one 
         splash.pop()
     landing_area_display = Triangle(int(vertex_1[0])+64, 32-int(vertex_1[1]), int(vertex_2[0])+64, 32-int(vertex_2[1]), int(vertex_3[0])+64, 32-int(vertex_3[1]), outline=0xFFFFFF)
-    splash.append(landing_area_display) # show this triangle
-
+    splash.append(landing_area_display) # print the new triangle
 ```
  
 #### Reflection
-This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print. I added lines from my previous OLED assignment and with some help from my neighbors I was able to get the code working correctly. 
-
+This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print. I added lines from my previous OLED assignment and with some help from my the people sitting next to me and using parts of [River's code](https://github.com/rivques) code, I was able to finish this assignment.
 ## Morse_Code
 
 ### Part 1
 
 #### Assignment Description
 
-For this assignment we had to write a morse code translator and print those dots and dashes to the serial monitor. The script must accept text input and if you type anything else, your script must translate the text to morse code dots and dashes, and print those to the monitor. The printed text must use a space to show breaks between letters, and a slash to show breaks between words. 
+For this assignment we had to write a morse code translator and print those dots and dashes to the serial monitor. The script must accept text input and if you type anything else, your script must translate the text to morse code dots and dashes, and print those to the monitor. The printed text must use a space to show breaks between letters, and a slash to show breaks between words. I used large portions of Rivers's work in this assignment. [Here is a link to their notebook](https://github.com/rivques)
 
 
 #### Evidence 
@@ -749,8 +736,8 @@ MORSE_CODE = { 'A':'.-', 'B':'-...',
     '?':'..--..', '/':'-..-.', '-':'-....-',
     '(':'-.--.', ')':'-.--.-'} # letters and numbers in morse code 
 
-led = digitalio.DigitalInOut(board.GP14)
-led.direction = digitalio.Direction.OUTPUT # led as an output on GP14
+led = digitalio.DigitalInOut(board.GP14) # led as an output on GP14
+led.direction = digitalio.Direction.OUTPUT 
 
 modifier = 0.25 # base delay for led
 
@@ -767,10 +754,10 @@ while True:
     if user_input == "-X": # uppercase because of the previous line
         break # if you input x it quits
     morse_translation = ""
-    translation_good = True # flag to be set if we hit an unknown character
+    translation_good = True # translation is correct 
     for letter in user_input:
         if letter == " ":
-            morse_translation += "/" # a space in the input translates to a break or "/" in morse
+            morse_translation += "/" # a space in the input translates to a break 
         else:
             try:
                 morse_translation += MORSE_CODE[letter] + " " # for spaces between characters
@@ -784,7 +771,7 @@ while True:
             on_delay = delayz[character]
             off_delay = delayz[character] # import the delays from the if statement
             if on_delay == 0:
-                time.sleep(off_delay)
+                time.sleep(off_delay) # led if off if there is nothing typed 
             else:
                 led.value = True
                 time.sleep(on_delay)
@@ -794,7 +781,8 @@ while True:
 ```
  
 #### Reflection
-This assignment wasn't that bad, I used the code from the assignment before and then I already knew how to code an LED, the only difficult thing was to get the LED to either blink or flash which I got help from google and my neighbors. The wiring was super simple because I've wired an LED so many times. Overall this assignment wasn't bad and it was fun to learn morse code.
+This assignment wasn't that bad, I used the code from the assignment before and then I already knew how to code an LED, the only difficult thing was to get the LED to either blink or flash which I got help from google and my neighbors. The wiring was super simple because I've wired an LED so many times. Overall this assignment wasn't bad and it was fun to learn morse code. I used large portions of Rivers's work in this assignment. [Here is a link to their notebook](https://github.com/rivques)
+
 
 ## Data_Storage
 
@@ -834,22 +822,22 @@ i2c = busio.I2C(scl_pin, sda_pin)
 mpu = adafruit_mpu6050.MPU6050(i2c) # set up for variables and pin locations
 
 while True: 
-    acc = mpu.acceleration # new var
+    acc = mpu.acceleration
     print(f"X: {acc[0]}m/s² Y: {acc[1]}m/s² Z: {acc[2]}m/s²") # f string for accel of the breadboard
     time.sleep(0.25)
     led1.value = False # default led is off
     if abs(acc[2]) < 2:
-        led1.value = True # when tilted sideway turn the led on 
+        led1.value = True # led turns on 
     if not storage.getmount("/").readonly: # call back to the boot.py file
         with open("/data.csv", "a") as datalog:
             time_elapsed = time.monotonic()
             csv_string = f"{time_elapsed},{acc[0]},{acc[1]},{acc[2]},{led1.value}\n"
             # f string showing time, acc, and whether or not it's tilted
             datalog.write(csv_string)
-            led1.value = True
+            led1.value = True # led turns on
             time.sleep(0.1)
-            led1.value = False
-            time.sleep(0.1) # blink led to show switch between modes
+            led1.value = False # led turns off 
+            time.sleep(0.1) # led blink to show switch between settings 
             datalog.flush() # record to the datalog
             time.sleep(0.25)
     else:
@@ -858,7 +846,7 @@ while True:
 ```
  
 #### Reflection
-This assignment was too bad because we already had most of the code written from the Crash Avoidance assignment. The boot.py code was already given to us and I needed to make sure to save it correctly because that allows you to switch from "code" to "data" mode. When it is in data mode you can collet data when it is unplugged and it code mode you can edit the code. There wasn't a ton of code towrite I just needed to understand how to collect the data and then open in up in an EXCEL.
+This assignment was too bad because we already had most of the code written from the Crash Avoidance assignment. The boot.py code was already given to us and I needed to make sure to save it correctly because that allows you to switch from "code" to "data" mode. When it is in data mode you can collet data when it is unplugged and it code mode you can edit the code. There wasn't a ton of code towrite I just needed to understand how to collect the data and then open in up in an EXCEL. I also got help from the people sitting next to me to put my f" strings into one, and I got help from [Cooper's code](ttps://github.com/Cooper-Moreland)
 
 ### Part 2 
 
