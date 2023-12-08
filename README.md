@@ -538,7 +538,7 @@ while True:
   ```
  
 #### Reflection
-This assignment was too bad, getting help from the people next to me and using parts of [River's code](https://github.com/rivques) code, I was able to easily trouble shoot and see why it wasn't working. My biggest problem was that it was just loading very slowly so it took forever to type in the coordinates but it worked well and printed out what I needed. 
+This assignment was too bad, getting help from the people next to me and using parts of [River's code](https://github.com/rivques), I was able to easily trouble shoot and see why it wasn't working. My biggest problem was that it was just loading very slowly so it took forever to type in the coordinates but it worked well and printed out what I needed. 
 
 ### Part 2
 
@@ -632,14 +632,14 @@ while True:
 ```
  
 #### Reflection
-This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print. I added lines from my previous OLED assignment and with some help from my the people sitting next to me and using parts of [River's code](https://github.com/rivques) code, I was able to finish this assignment.
+This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print. I added lines from my previous OLED assignment and with some help from my the people sitting next to me and using parts of [River's code](https://github.com/rivques), I was able to finish this assignment.
 ## Morse_Code
 
 ### Part 1
 
 #### Assignment Description
 
-For this assignment we had to write a morse code translator and print those dots and dashes to the serial monitor. The script must accept text input and if you type anything else, your script must translate the text to morse code dots and dashes, and print those to the monitor. The printed text must use a space to show breaks between letters, and a slash to show breaks between words. I used large portions of Rivers's work in this assignment. [Here is a link to their notebook](https://github.com/rivques)
+For this assignment we had to write a morse code translator and print those dots and dashes to the serial monitor. The script must accept text input and if you type anything else, your script must translate the text to morse code dots and dashes, and print those to the monitor. The printed text must use a space to show breaks between letters, and a slash to show breaks between words. 
 
 
 #### Evidence 
@@ -695,8 +695,7 @@ print("done")
 ```
  
 #### Reflection
-This was the first time I have used morse code, but we were given the dictionary which was really nice. The code wasn't bad because it was just if statements and I learned to make a space you use += instead of just =. With the help from my neighbors I was able to get my code up and running.
-
+This was the first time I have used morse code, but we were given the dictionary which was really nice. The code wasn't bad because it was just if statements and I learned to make a space you use += instead of just =. With the help from my neighbors I was able to get my code up and running. I used large portions of Rivers's work in this assignment. [Here is a link to their notebook](https://github.com/rivques)
 ### Part 2
 
 #### Assignment Description
