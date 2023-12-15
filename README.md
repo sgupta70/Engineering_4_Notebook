@@ -538,7 +538,7 @@ while True:
   ```
  
 #### Reflection
-This assignment was too bad, getting help from the people next to me and using parts of [River's code](https://github.com/rivques), I was able to easily trouble shoot and see why it wasn't working. My biggest problem was that it was just loading very slowly so it took forever to type in the coordinates but it worked well and printed out what I needed. 
+I copied my entire coding assignment from River. [Here is a link to their notebook](https://github.com/rivques). In the beginning my code wasn't working but I was able to easily trouble shoot and see why it wasn't working. My biggest problem was that it was just loading very slowly so it took forever to type in the coordinates but it worked well and printed out what I needed. I also already had the wiring so I didn't have to fix much for that. 
 
 ### Part 2
 
@@ -632,7 +632,8 @@ while True:
 ```
  
 #### Reflection
-This assignment was just adding on from what we did above so the code wasn't bad. We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print. I added lines from my previous OLED assignment and with some help from my the people sitting next to me and using parts of [River's code](https://github.com/rivques), I was able to finish this assignment.
+We already wired an OLED screen so I didn't need to fix my wiring at all and I had some code from that assignment so I knew how to turn it on and get it to print. I copied my entire coding assignment from River. [Here is a link to their notebook](https://github.com/rivques).
+
 ## Morse_Code
 
 ### Part 1
